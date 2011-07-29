@@ -146,6 +146,10 @@ private:
     struct pollfd mPollFds[numFds];
     int mWritePipeFd;
     SensorBase* mSensors[numSensorDrivers];
+    
+    // For keeping track of usage (from android system and from orientation sensor)
+    int mAccelActive;
+    int mMagnetActive;
 
     int handleToDriver(int handle) const {
         switch (handle) {
@@ -205,6 +209,9 @@ sensors_poll_context_t::sensors_poll_context_t()
     mPollFds[wake].fd = wakeFds[0];
     mPollFds[wake].events = POLLIN;
     mPollFds[wake].revents = 0;
+
+    mAccelActive = 0;
+    mMagnetActive = 0;
 }
 
 sensors_poll_context_t::~sensors_poll_context_t() {
@@ -216,9 +223,36 @@ sensors_poll_context_t::~sensors_poll_context_t() {
 }
 
 int sensors_poll_context_t::activate(int handle, int enabled) {
+    int err;
+
+    // Orientation requires accelerometer and magnetic sensor
+    if (handle == ID_O) {
+        err = activate(ID_A, enabled);
+        if (err) return err;
+
+        err = activate(ID_M, enabled);
+        if (err) return err;
+    }
+    // Keep track of magnetic and accelerometer use
+    // use can be from android system or from orientation sensor
+    else if (handle == ID_A) {
+        if (enabled != 0) mAccelActive++;
+        else if (mAccelActive > 0) {
+            mAccelActive--;
+            if (mAccelActive != 0) return 0; // Don't disable
+        }
+    }
+    else if (handle == ID_M) {
+        if (enabled != 0) mMagnetActive++;
+        else if (mMagnetActive > 0){
+            mMagnetActive--;
+            if (mMagnetActive != 0) return 0; // Don't disable
+        }
+    }
+
     int index = handleToDriver(handle);
     if (index < 0) return index;
-    int err =  mSensors[index]->enable(handle, enabled);
+    err =  mSensors[index]->enable(handle, enabled);
     if (enabled && !err) {
         const char wakeMessage(WAKE_MESSAGE);
         int result = write(mWritePipeFd, &wakeMessage, 1);

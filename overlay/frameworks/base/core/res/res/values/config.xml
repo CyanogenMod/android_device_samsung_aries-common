@@ -182,4 +182,55 @@
     <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true -->
     <bool translatable="false" name="skip_restoring_network_selection">true</bool>
+
+    <!-- Override supported mode returned by Camera.Parameters.getSupported*() -->
+    <string-array translatable="false" name="config_camera_supported_antibanding">
+        <item>50hz</item>
+    </string-array>
+
+    <string-array translatable="false" name="config_camera_supported_focus_modes">
+        <item>auto</item>
+        <item>macro</item>
+        <item>facedetect</item>
+    </string-array>
+
+    <string-array translatable="false" name="config_camera_supported_auto_exposure_modes">
+        <item>center</item>
+        <item>spot</item>
+        <item>matrix</item>
+    </string-array>
+
+    <string-array translatable="false" name="config_camera_supported_iso_values">
+        <item>auto</item>
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>400</item>
+        <item>800</item>
+        <item>1600</item>
+        <item>3200</item>
+        <item>sports</item>
+        <item>night</item>
+        <item>movie</item>
+    </string-array>
+
+    <string-array translatable="false" name="config_camera_supported_scene_modes">
+        <item>auto</item>
+        <item>portrait</item>
+        <item>landscape</item>
+        <item>sports</item>
+        <item>sunset</item>
+        <item>dusk-dawn</item>
+        <item>fireworks</item>
+        <item>beach</item>
+        <item>party</item>
+        <item>night</item>
+        <item>fall-color</item>
+        <item>text</item>
+        <item>candlelight</item>
+        <item>back-light</item>
+    </string-array>
+
+    <!-- Different property for KEY_AUTO_EXPOSURE (e.g. Samsung's Phones) -->
+    <string translatable="false" name="config_camera_key_auto_exposure">metering</string>
 </resources>

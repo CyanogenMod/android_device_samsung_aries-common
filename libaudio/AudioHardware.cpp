@@ -71,6 +71,10 @@ enum {
 #define TRACE_DRIVER_OUT
 #endif
 
+/*****************IOCTLS******************/
+#define Si4709_IOC_MAGIC  0xFA
+#define Si4709_IOC_VOLUME_SET  _IOW(Si4709_IOC_MAGIC, 15, __u8)
+
 // ----------------------------------------------------------------------------
 
 const char *AudioHardware::inputPathNameDefault = "Default";
@@ -643,6 +647,40 @@ status_t AudioHardware::setVoiceVolume(float volume)
         setCallVolume(mRilClient, type, int_volume);
     }
 
+    return NO_ERROR;
+}
+
+static void set_volume_fm(uint32_t volume) {
+    const char fmDevice[] = "/dev/radio0";
+    float ratio = 0.15;
+    int fd;
+    int fmVolume;
+    int ret;
+
+    fmVolume = volume * ratio;
+
+    fd = open(fmDevice, O_RDWR);
+
+    ret = ioctl(fd, Si4709_IOC_VOLUME_SET, &fmVolume);
+
+    if (ret < 0)
+    {
+        LOGE("%s: Setting the FM volume failed", __func__);
+    }
+
+    close(fd);
+}
+
+status_t AudioHardware::setFmVolume(float v) {
+    int vol = AudioSystem::logToLinear(v);
+
+    if (vol > 100)
+        vol = 100;
+    else if (vol < 0)
+        vol = 0;
+
+    LOGV("setFmVolume input volume: %f linear volume: %d", v, vol);
+    set_volume_fm(vol);
     return NO_ERROR;
 }
 

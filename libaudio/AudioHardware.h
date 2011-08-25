@@ -86,6 +86,9 @@ public:
 
     virtual status_t setVoiceVolume(float volume);
     virtual status_t setMasterVolume(float volume);
+#ifdef HAVE_FM_RADIO
+    virtual status_t setFmVolume(float volume);
+#endif
 
     virtual status_t setMode(int mode);
 
@@ -179,6 +182,10 @@ private:
 
     //  trace driver operations for dump
     int             mDriverOp;
+
+#ifdef HAVE_FM_RADIO
+    int             mFmFd;
+#endif
 
     static uint32_t         checkInputSampleRate(uint32_t sampleRate);
     static const uint32_t   inputSamplingRates[];

@@ -521,11 +521,11 @@ status_t AudioHardware::setParameters(const String8& keyValuePairs)
     key = String8(AudioParameter::keyFmOn);
     if (param.get(key, value) == NO_ERROR) {
         LOGV("AudioHardware::setParameters() Turning FM Radio ON");
-        if (mMixer == NULL) {
-            openPcmOut_l();
-            openMixer_l();
-            setInputSource_l(AUDIO_SOURCE_DEFAULT);
-        }
+
+        openPcmOut_l();
+        openMixer_l();
+        setInputSource_l(AUDIO_SOURCE_DEFAULT);
+
         if (mMixer != NULL) {
             LOGV("AudioHardware::setParameters() FM Radio is ON, calling setFMRadioPath_l()");
             setFMRadioPath_l(mOutput->device());
@@ -823,6 +823,15 @@ status_t AudioHardware::setFMRadioPath_l(uint32_t device)
 
     AudioPath path;
     const char *fmpath;
+
+    if (device != AudioSystem::DEVICE_OUT_SPEAKER && (device & AudioSystem::DEVICE_OUT_SPEAKER) != 0) {
+        /* Fix the case where we're on headset and the system has just played a 
+         * notification sound to both the speaker and the headset. The device
+         * now is an ORed value and we need to get back its original value.
+         */
+         device -= AudioSystem::DEVICE_OUT_SPEAKER;
+         LOGD("setFMRadioPath_l() device removed speaker %x", device);
+    }
 
     switch(device){
          case AudioSystem::DEVICE_OUT_SPEAKER:

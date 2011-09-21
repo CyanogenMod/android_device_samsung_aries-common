@@ -351,3 +351,20 @@ service console /system/bin/sh
 
 on property:ro.secure=0
     start console
+
+service toggleshutter /system/bin/toggleshutter
+    user system
+    group system
+    oneshot
+
+on property:ro.camera.sound.disabled=0
+    start toggleshutter
+
+on property:ro.camera.sound.disabled=1
+    start toggleshutter
+
+on property:persist.sys.camera-mute=0
+    start toggleshutter
+
+on property:persist.sys.camera-mute=1
+    start toggleshutter

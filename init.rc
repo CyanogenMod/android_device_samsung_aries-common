@@ -12,6 +12,7 @@ loglevel 9
     export LD_LIBRARY_PATH /vendor/lib:/system/lib
     export ANDROID_BOOTLOGO 1
     export ANDROID_CACHE /cache
+    export DOWNLOAD_CACHE /cache/download
     export ANDROID_ROOT /system
     export ANDROID_ASSETS /system/app
     export ANDROID_DATA /data

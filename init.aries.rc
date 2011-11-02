@@ -139,6 +139,8 @@ on post-fs
     chmod 0660 /data/misc/wifi/wpa_supplicant.conf
     mkdir /data/local 0771 shell shell
     mkdir /data/local/tmp 0771 shell shell
+    mkdir /data/local/download 0771 system cache
+    mkdir /cache/download 0771 system cache
     #mkdir /data/data 0771 system system
     # symlink /data/data to /datadata for performance
     symlink /datadata /data/data

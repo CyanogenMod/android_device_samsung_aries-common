@@ -157,3 +157,9 @@ service geomagneticd /system/vendor/bin/geomagneticd
 service tvout /system/bin/tvoutserver
     user system
     group graphics
+
+service tvouthack /system/bin/tvouthack
+    user system
+    group graphics
+    disabled
+

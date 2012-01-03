@@ -13,9 +13,6 @@ on boot
     write /proc/sys/vm/dirty_expire_centisecs 1000
     write /proc/sys/vm/dirty_ratio 90
 
-# Include extra init file
-    import /device.rc
-
     setprop ro.build.product aries
     setprop ro.product.device aries
     setprop ro.radio.noril yes

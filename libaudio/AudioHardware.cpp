@@ -371,10 +371,10 @@ status_t AudioHardware::setMode(int mode)
     status = AudioHardwareBase::setMode(mode);
     LOGV("setMode() : new %d, old %d", mMode, prevMode);
     if (status == NO_ERROR) {
-        // activate call clock in radio when entering in call or ringtone mode
-        if (prevMode == AudioSystem::MODE_NORMAL)
+        // activate call clock in radio when entering in call mode
+        if (mMode == AudioSystem::MODE_IN_CALL && !mActivatedCP)
         {
-            if ((!mActivatedCP) && (mSecRilLibHandle) && (connectRILDIfRequired() == OK)) {
+            if ((mSecRilLibHandle) && (connectRILDIfRequired() == OK)) {
                 setCallClockSync(mRilClient, SOUND_CLOCK_START);
                 mActivatedCP = true;
             }

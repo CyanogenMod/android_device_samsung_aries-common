@@ -19,6 +19,7 @@ public class DeviceSettings extends PreferenceActivity  {
     public static final String KEY_HSPA = "hspa";
     public static final String KEY_TVOUT_ENABLE = "tvout_enable";
     public static final String KEY_TVOUT_SYSTEM = "tvout_system";
+    public static final String KEY_VOLUME_BOOST = "volume_boost";
 
     private ColorTuningPreference mColorTuning;
     private ListPreference mMdnie;
@@ -27,6 +28,7 @@ public class DeviceSettings extends PreferenceActivity  {
     private CheckBoxPreference mTvOutEnable;
     private ListPreference mTvOutSystem;
     private TvOut mTvOut;
+    private VolumeBoostPreference mVolumeBoost;
 
     private BroadcastReceiver mHeadsetReceiver = new BroadcastReceiver() {
 
@@ -57,6 +59,9 @@ public class DeviceSettings extends PreferenceActivity  {
         mHspa = (ListPreference) findPreference(KEY_HSPA);
         mHspa.setEnabled(Hspa.isSupported());
         mHspa.setOnPreferenceChangeListener(new Hspa(this));
+
+        mVolumeBoost = (VolumeBoostPreference) findPreference(KEY_VOLUME_BOOST);
+        mVolumeBoost.setEnabled(VolumeBoostPreference.isSupported());
 
         mTvOut = new TvOut();
         mTvOutEnable = (CheckBoxPreference) findPreference(KEY_TVOUT_ENABLE);

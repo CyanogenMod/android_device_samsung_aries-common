@@ -174,6 +174,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     persist.sys.usb.config=mass_storage \
     persist.sys.vold.switchexternal=1
 
+# Set a default back kill app timeout low enough to not conflict
+# with our default touch key timeout.
+PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+	ro.cm.back_kill_timeout=1500
+
 include frameworks/base/build/phone-hdpi-512-dalvik-heap.mk
 
 # we have enough storage space to hold precise GC data

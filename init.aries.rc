@@ -18,6 +18,9 @@ on init
     symlink /storage/sdcard1 /mnt/emmc
     # FIXME: Remove emmc?
 
+    # sysfs params
+    write /sys/devices/system/cpu/cpufreq/interactive/input_boost 1
+
     # We will create our own ril-daemon service in class 'core' because the
     # rild doesn't like being killed. (During device encryption.)
     stop ril-daemon

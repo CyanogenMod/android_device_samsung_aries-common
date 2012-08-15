@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.Intent;
 
 public class Startup extends BroadcastReceiver {
-
     @Override
     public void onReceive(final Context context, final Intent bootintent) {
         ColorTuningPreference.restore(context);
@@ -14,6 +13,6 @@ public class Startup extends BroadcastReceiver {
         Hspa.restore(context);
         VolumeBoostPreference.restore(context);
         DockAudio.restore(context);
+        Sanity.check(context);
     }
-
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+   package="com.cyanogenmod.aries.sanitychecker" android:sharedUserId="android.uid.system">
+   <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+   <application android:label="SanityChecker"
+                android:icon="@android:color/transparent">
+      <receiver android:name=".Startup">
+         <intent-filter android:priority="100">
+            <action android:name="android.intent.action.BOOT_COMPLETED" />
+         </intent-filter>
+      </receiver>
+      <activity android:name=".WarnActivity"
+                android:label="@string/generic_warning_title"
+                android:theme="@android:style/Theme.Translucent"></activity>
+   </application>
+</manifest>

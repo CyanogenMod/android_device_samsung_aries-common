@@ -44,6 +44,26 @@ typedef struct RilClient * HRilClient;
 #define RIL_CLIENT_ERR_RESOURCE     6 // Resource not available
 #define RIL_CLIENT_ERR_UNKNOWN      7
 
+#ifdef USES_FROYO_RILCLIENT
+#define OEM_FUNC_SOUND              0x08
+
+#define OEM_SND_SET_VOLUME_CTRL     0x03
+#define OEM_SND_SET_AUDIO_PATH      0x05
+#define OEM_SND_SET_CLOCK_CTRL      0x0A // might be 0x09?
+
+#define OEM_SND_TYPE_VOICE          0x01
+#define OEM_SND_TYPE_SPEAKER        0x02
+#define OEM_SND_TYPE_HEADSET        0x03
+#define OEM_SND_TYPE_BTVOICE        0x04
+
+#define OEM_SND_AUDIO_PATH_HANDSET          0x01
+#define OEM_SND_AUDIO_PATH_HEADSET          0x02
+#define OEM_SND_AUDIO_PATH_BLUETOOTH        0x04
+#define OEM_SND_AUDIO_PATH_STEREO_BLUETOOTH 0x05
+#define OEM_SND_AUDIO_PATH_SPEAKER          0x06
+#define OEM_SND_AUDIO_PATH_HEADPHONE        0x07
+#define OEM_SND_AUDIO_PATH_BT_NSEC_OFF      0x08
+#endif
 
 //---------------------------------------------------------------------------
 // Type definitions

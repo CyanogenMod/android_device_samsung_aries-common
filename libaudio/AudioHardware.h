@@ -191,9 +191,18 @@ private:
     int             (*closeClientRILD) (HRilClient);
     int             (*isConnectedRILD) (HRilClient);
     int             (*connectRILD)     (HRilClient);
+#ifdef USES_FROYO_RILCLIENT
+    int             (*invokeOemRequestHookRaw) (HRilClient, char *, size_t);
+    int             (convertSoundType)    (SoundType);
+    int             (convertAudioPath)    (AudioPath);
+    int             (setCallVolume)       (HRilClient, SoundType, int);
+    int             (setCallAudioPath)    (HRilClient, AudioPath);
+    int             (setCallClockSync)    (HRilClient, SoundClockCondition);
+#else
     int             (*setCallVolume)   (HRilClient, SoundType, int);
     int             (*setCallAudioPath)(HRilClient, AudioPath);
     int             (*setCallClockSync)(HRilClient, SoundClockCondition);
+#endif
     void            loadRILD(void);
     status_t        connectRILDIfRequired(void);
     struct echo_reference_itfe *mEchoReference;

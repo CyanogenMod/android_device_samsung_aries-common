@@ -44,7 +44,6 @@ typedef struct RilClient * HRilClient;
 #define RIL_CLIENT_ERR_RESOURCE     6 // Resource not available
 #define RIL_CLIENT_ERR_UNKNOWN      7
 
-
 //---------------------------------------------------------------------------
 // Type definitions
 //---------------------------------------------------------------------------

@@ -44,6 +44,27 @@ extern "C" {
 #define Si4709_IOC_VOLUME_SET                       _IOW(Si4709_IOC_MAGIC, 15, __u8)
 #endif
 
+#ifdef USES_FROYO_RILCLIENT
+#define OEM_FUNC_SOUND                      0x08
+
+#define OEM_SND_SET_VOLUME_CTRL             0x03
+#define OEM_SND_SET_AUDIO_PATH              0x05
+#define OEM_SND_SET_CLOCK_CTRL              0x0A
+
+#define OEM_SND_TYPE_VOICE                  0x01
+#define OEM_SND_TYPE_SPEAKER                0x02
+#define OEM_SND_TYPE_HEADSET                0x03
+#define OEM_SND_TYPE_BTVOICE                0x04
+
+#define OEM_SND_AUDIO_PATH_HANDSET          0x01
+#define OEM_SND_AUDIO_PATH_HEADSET          0x02
+#define OEM_SND_AUDIO_PATH_BLUETOOTH        0x04
+#define OEM_SND_AUDIO_PATH_STEREO_BLUETOOTH 0x05
+#define OEM_SND_AUDIO_PATH_SPEAKER          0x06
+#define OEM_SND_AUDIO_PATH_HEADPHONE        0x07
+#define OEM_SND_AUDIO_PATH_BT_NSEC_OFF      0x08
+#endif
+
 namespace android_audio_legacy {
 
 const uint32_t AudioHardware::inputConfigTable[][AudioHardware::INPUT_CONFIG_CNT] = {
@@ -170,16 +191,22 @@ void AudioHardware::loadRILD(void)
                               dlsym(mSecRilLibHandle, "isConnected_RILD");
         connectRILD      = (int (*)(HRilClient))
                               dlsym(mSecRilLibHandle, "Connect_RILD");
+#ifdef USES_FROYO_RILCLIENT
+        invokeOemRequestHookRaw = (int (*)(HRilClient client, char *data, size_t len))
+                              dlsym(mSecRilLibHandle, "InvokeOemRequestHookRaw");
+        bool rilFunctionsLoaded = invokeOemRequestHookRaw;
+#else
         setCallVolume    = (int (*)(HRilClient, SoundType, int))
                               dlsym(mSecRilLibHandle, "SetCallVolume");
         setCallAudioPath = (int (*)(HRilClient, AudioPath))
                               dlsym(mSecRilLibHandle, "SetCallAudioPath");
         setCallClockSync = (int (*)(HRilClient, SoundClockCondition))
                               dlsym(mSecRilLibHandle, "SetCallClockSync");
-
+        bool rilFunctionsLoaded = setCallVolume && setCallAudioPath && setCallClockSync;
+#endif
         if (!openClientRILD  || !disconnectRILD   || !closeClientRILD ||
             !isConnectedRILD || !connectRILD      ||
-            !setCallVolume   || !setCallAudioPath || !setCallClockSync) {
+            !rilFunctionsLoaded) {
             ALOGE("Can't load all functions from libsecril-client.so");
 
             dlclose(mSecRilLibHandle);
@@ -216,6 +243,68 @@ status_t AudioHardware::connectRILDIfRequired(void)
 
     return OK;
 }
+
+#ifdef USES_FROYO_RILCLIENT
+int AudioHardware::convertSoundType(SoundType type) {
+    switch (type) {
+        case SOUND_TYPE_VOICE:   return OEM_SND_TYPE_VOICE;
+        case SOUND_TYPE_SPEAKER: return OEM_SND_TYPE_SPEAKER;
+        case SOUND_TYPE_HEADSET: return OEM_SND_TYPE_HEADSET;
+        case SOUND_TYPE_BTVOICE: return OEM_SND_TYPE_BTVOICE;
+        default:
+            ALOGE("convertSoundType: unknown type! %d", type);
+            return OEM_SND_TYPE_VOICE;
+    }
+}
+
+int AudioHardware::convertAudioPath(AudioPath path) {
+    switch (path) {
+        case SOUND_AUDIO_PATH_HANDSET:          return OEM_SND_AUDIO_PATH_HANDSET;
+        case SOUND_AUDIO_PATH_SPEAKER:          return OEM_SND_AUDIO_PATH_SPEAKER;
+        case SOUND_AUDIO_PATH_BLUETOOTH:        return OEM_SND_AUDIO_PATH_BLUETOOTH;
+        case SOUND_AUDIO_PATH_BLUETOOTH_NO_NR:  return OEM_SND_AUDIO_PATH_BT_NSEC_OFF;
+        case SOUND_AUDIO_PATH_HEADPHONE:        return OEM_SND_AUDIO_PATH_HEADPHONE;
+        case SOUND_AUDIO_PATH_HEADSET:          return OEM_SND_AUDIO_PATH_HEADSET;
+        default:
+            ALOGE("convertAudioPath: unknown path! %d", path);
+            return OEM_SND_AUDIO_PATH_HANDSET;
+    }
+}
+
+int AudioHardware::setCallVolume(HRilClient client, SoundType type, int vol) {
+    char data[6] = {0,};
+    data[0] = OEM_FUNC_SOUND;
+    data[1] = OEM_SND_SET_VOLUME_CTRL;
+    data[2] = 0x00;
+    data[3] = 0x06;
+    data[4] = convertSoundType(type);
+    data[5] = vol;
+
+    return invokeOemRequestHookRaw(client, data, sizeof(data));
+}
+
+int AudioHardware::setCallAudioPath(HRilClient client, AudioPath path) {
+    char data[5] = {0,};
+    data[0] = OEM_FUNC_SOUND;
+    data[1] = OEM_SND_SET_AUDIO_PATH;
+    data[2] = 0x00;
+    data[3] = 0x05;
+    data[4] = convertAudioPath(path);
+
+    return invokeOemRequestHookRaw(client, data, sizeof(data));
+}
+
+int AudioHardware::setCallClockSync(HRilClient client, SoundClockCondition condition) {
+    char data[5] = {0,};
+    data[0] = OEM_FUNC_SOUND;
+    data[1] = OEM_SND_SET_CLOCK_CTRL;
+    data[2] = 0x00;
+    data[3] = 0x05;
+    data[4] = condition;
+
+    return invokeOemRequestHookRaw(client, data, sizeof(data));
+}
+#endif
 
 AudioStreamOut* AudioHardware::openOutputStream(
     uint32_t devices, int *format, uint32_t *channels,

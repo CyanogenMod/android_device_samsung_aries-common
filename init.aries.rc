@@ -44,6 +44,8 @@ on boot
 on fs
     mkdir /radio 0775 radio radio
     mount yaffs2 mtd@radio /radio
+    # We don't support encryption on yaffs (set before mount_all)
+    setprop ro.crypto.state unsupported
     mount_all fstab.aries
 
     chown radio radio /radio/modem.bin

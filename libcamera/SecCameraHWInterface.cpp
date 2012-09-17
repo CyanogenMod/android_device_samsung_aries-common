@@ -339,7 +339,6 @@ void CameraHardwareSec::initDefaultParameters(int cameraId)
     ip.set("sharpness", SHARPNESS_DEFAULT);
     ip.set("contrast", CONTRAST_DEFAULT);
     ip.set("saturation", SATURATION_DEFAULT);
-    ip.set("iso", "auto");
     ip.set("metering", "center");
 
     ip.set("wdr", 0);
@@ -348,6 +347,21 @@ void CameraHardwareSec::initDefaultParameters(int cameraId)
         ip.set("vtmode", 0);
         ip.set("blur", 0);
     }
+
+    parameterString = CameraParameters::ISO_AUTO;
+    parameterString.append(",");
+    parameterString.append(CameraParameters::ISO_100);
+    parameterString.append(",");
+    parameterString.append(CameraParameters::ISO_200);
+    parameterString.append(",");
+    parameterString.append(CameraParameters::ISO_400);
+    parameterString.append(",");
+    parameterString.append(CameraParameters::ISO_800);
+    parameterString.append(",");
+    parameterString.append(CameraParameters::ISO_1600);
+    p.set(CameraParameters::KEY_SUPPORTED_ISO_MODES,
+          parameterString.string());
+    p.set(CameraParameters::KEY_ISO_MODE, CameraParameters::ISO_AUTO);
 
     p.set(CameraParameters::KEY_HORIZONTAL_VIEW_ANGLE, "51.2");
     p.set(CameraParameters::KEY_VERTICAL_VIEW_ANGLE, "39.4");
@@ -1559,6 +1573,44 @@ status_t CameraHardwareSec::setParameters(const CameraParameters& params)
             ret = UNKNOWN_ERROR;
         } else {
             mParameters.set(CameraParameters::KEY_EXPOSURE_COMPENSATION, new_exposure_compensation);
+        }
+    }
+
+    // ISO
+    const char *new_iso_str = params.get(CameraParameters::KEY_ISO_MODE);
+    ALOGI("%s : new_iso_str %s", __func__, new_iso_str);
+    if (new_iso_str != NULL) {
+       int new_iso = -1;
+
+        if (!strcmp(new_iso_str, CameraParameters::ISO_AUTO))
+            new_iso = ISO_AUTO;
+        else if (!strcmp(new_iso_str,
+                         CameraParameters::ISO_100))
+            new_iso = ISO_100;
+        else if (!strcmp(new_iso_str,
+                         CameraParameters::ISO_200))
+            new_iso = ISO_200;
+        else if (!strcmp(new_iso_str,
+                         CameraParameters::ISO_400))
+            new_iso = ISO_400;
+        else if (!strcmp(new_iso_str,
+                         CameraParameters::ISO_800))
+            new_iso = ISO_800;
+        else if (!strcmp(new_iso_str,
+                         CameraParameters::ISO_1600))
+            new_iso = ISO_1600;
+        else {
+            ALOGE("ERR(%s):Invalid iso(%s)", __func__, new_iso_str);
+            ret = UNKNOWN_ERROR;
+        }
+
+        if (0 <= new_iso) {
+            if (mSecCamera->setISO(new_iso) < 0) {
+                ALOGE("ERR(%s):Fail on mSecCamera->setISO(new_iso(%d))", __func__, new_iso);
+                ret = UNKNOWN_ERROR;
+            } else {
+                mParameters.set(CameraParameters::KEY_ISO_MODE, new_iso_str);
+            }
         }
     }
 

@@ -248,7 +248,6 @@ on boot
     setprop net.tcp.buffersize.gprs    4092,8760,11680,4096,8760,11680
 
     write /dev/graphics/fb3 1
-    umount /system
 
     class_start default
 
@@ -265,6 +264,15 @@ service console /sbin/sh
 
 on property:ro.secure=0
     start console
+
+# LVM services
+# Scan for LVM physical volumes and set up volume groups
+service lvm_vgscan /lvm/sbin/lvm vgscan --mknodes --ignorelockingfailure
+    oneshot
+
+# Activate LVM logical volumes in found volume groups
+service lvm_vgchange /lvm/sbin/lvm vgchange -aly --ignorelockingfailure
+    oneshot
 
 service recovery /sbin/recovery
 

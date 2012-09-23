@@ -121,6 +121,11 @@ PRODUCT_PACKAGES += \
 	AriesParts \
 	tvouthack
 
+# Charger
+PRODUCT_PACKAGES += \
+	charger \
+	charger_res_images
+
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \

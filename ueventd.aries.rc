@@ -25,6 +25,9 @@
 /dev/accelerometer        0660   system     system
 /sys/devices/virtual/input/input*   delay      0660  root   input
 
+# for Power HAL
+/sys/devices/system/cpu/cpufreq/ondemand/boostpulse   0666  system   system
+
 # for geomagneticd
 /sys/devices/virtual/input/input3   threshold      0660  root   input
 /sys/devices/virtual/input/input3   distortion     0660  root   input

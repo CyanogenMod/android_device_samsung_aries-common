@@ -25,7 +25,10 @@
 #include <hardware/hardware.h>
 #include <hardware/power.h>
 
-#define BOOSTPULSE_PATH "/sys/devices/system/cpu/cpufreq/ondemand/boostpulse"
+#define BOOSTPULSE_PATH "/sys/devices/system/cpu/cpufre/ondemand/boostpulse"
+#define SAMPLING_RATE_ONDEMAND "/sys/devices/system/cpu/cpufreq/ondemand/sampling_rate"
+#define SAMPLING_RATE_SCREEN_ON "50000"
+#define SAMPLING_RATE_SCREEN_OFF "500000"
 
 struct aries_power_module {
     struct power_module base;
@@ -106,12 +109,13 @@ static void aries_power_hint(struct power_module *module, power_hint_t hint,
 
 static void aries_power_set_interactive(struct power_module *module, int on)
 {
-    return;
+    sysfs_write(SAMPLING_RATE_ONDEMAND,
+            on ? SAMPLING_RATE_SCREEN_ON : SAMPLING_RATE_SCREEN_OFF);
 }
 
 static void aries_power_init(struct power_module *module)
 {
-    return;
+    sysfs_write(SAMPLING_RATE_ONDEMAND, SAMPLING_RATE_SCREEN_ON);
 }
 
 static struct hw_module_methods_t power_module_methods = {

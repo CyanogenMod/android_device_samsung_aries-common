@@ -95,6 +95,7 @@ PRODUCT_PACKAGES += \
 # Misc other modules
 PRODUCT_PACKAGES += \
 	lights.aries \
+	power.aries \
 	sensors.aries \
 	hwcomposer.s5pc110 \
 	camera.aries \

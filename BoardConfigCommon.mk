@@ -118,5 +118,8 @@ BOARD_ALLOW_EGL_HIBERNATION := true
 # hwcomposer: custom vsync ioctl
 BOARD_CUSTOM_VSYNC_IOCTL := true
 
+# Suspend in charger to disable capacitive keys
+BOARD_ALLOW_SUSPEND_IN_CHARGER := true
+
 # Include aries specific stuff
 -include device/samsung/aries-common/Android.mk

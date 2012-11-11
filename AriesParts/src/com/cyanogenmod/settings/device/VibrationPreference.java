@@ -51,6 +51,9 @@ public class VibrationPreference extends DialogPreference implements OnClickList
     private void SetupButtonClickListener(View view) {
         Button mTestButton = (Button)view.findViewById(R.id.vibration_test);
         mTestButton.setOnClickListener(this);
+
+        Button mResetButton = (Button)view.findViewById(R.id.vibration_reset);
+        mResetButton.setOnClickListener(this);
     }
 
     @Override
@@ -142,12 +145,20 @@ public class VibrationPreference extends DialogPreference implements OnClickList
             mValueDisplay.setText(String.valueOf(progress) + "%");
         }
 
+        public void resetDefault() {
+            mOriginal = MAX_VALUE;
+            reset();
+        }
     }
 
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.vibration_test:
                 testVibration();
+                break;
+            case R.id.vibration_reset:
+                Utils.writeValue(FILE_PATH, String.valueOf(MAX_VALUE));
+                mSeekBar.resetDefault();
                 break;
         }
     }

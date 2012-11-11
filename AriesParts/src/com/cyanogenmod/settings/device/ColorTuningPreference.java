@@ -7,6 +7,8 @@ import android.preference.DialogPreference;
 import android.preference.PreferenceManager;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -14,7 +16,7 @@ import android.widget.TextView;
  * Special preference type that allows configuration of both the ring volume and
  * notification volume.
  */
-public class ColorTuningPreference extends DialogPreference {
+public class ColorTuningPreference extends DialogPreference implements OnClickListener {
 
     enum Colors {
         RED,
@@ -92,6 +94,13 @@ public class ColorTuningPreference extends DialogPreference {
             TextView valueDisplay = (TextView) view.findViewById(GAMMA_VALUE_DISPLAY_ID[i]);
             mSeekBars[SEEKBAR_ID.length + i] = new GammaSeekBar(seekBar, valueDisplay, GAMMA_FILE_PATH[i]);
         }
+
+        SetupButtonClickListener(view);
+    }
+
+    private void SetupButtonClickListener(View view) {
+        Button mResetButton = (Button)view.findViewById(R.id.color_reset);
+        mResetButton.setOnClickListener(this);
     }
 
     @Override
@@ -208,6 +217,11 @@ public class ColorTuningPreference extends DialogPreference {
             mValueDisplay.setText(String.format("%.3f", (double) progress / MAX_VALUE));
         }
 
+        public void resetDefault(int value) {
+            mOriginal = value;
+            reset();
+        }
+
     }
 
     class GammaSeekBar extends ColorSeekBar {
@@ -239,4 +253,20 @@ public class ColorTuningPreference extends DialogPreference {
         }
 
     }
+
+    public void onClick(View v) {
+        switch(v.getId()) {
+            case R.id.color_reset:
+                for (int i = 0; i < SEEKBAR_ID.length; i++) {
+                    Utils.writeColor(FILE_PATH[i], MAX_VALUE);
+                    mSeekBars[i].resetDefault(MAX_VALUE);
+                }
+                for (int i = 0; i < GAMMA_SEEKBAR_ID.length; i++) {
+                    Utils.writeGamma(GAMMA_FILE_PATH[i], GAMMA_DEFAULT_VALUE);
+                    mSeekBars[SEEKBAR_ID.length + i].resetDefault(GAMMA_DEFAULT_VALUE);
+                }
+                break;
+        }
+    }
+
 }

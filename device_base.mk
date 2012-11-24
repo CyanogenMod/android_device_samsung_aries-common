@@ -44,8 +44,7 @@ DEVICE_PACKAGE_OVERLAYS := device/samsung/aries-common/overlay
 PRODUCT_COPY_FILES := \
 	device/samsung/aries-common/vold.fstab:system/etc/vold.fstab \
 	device/samsung/aries-common/egl.cfg:system/lib/egl/egl.cfg \
-	device/samsung/aries-common/mxt224_ts_input.idc:system/usr/idc/mxt224_ts_input.idc \
-	device/samsung/aries-common/main.conf:system/etc/bluetooth/main.conf
+	device/samsung/aries-common/mxt224_ts_input.idc:system/usr/idc/mxt224_ts_input.idc
 
 # Init files
 PRODUCT_COPY_FILES += \
@@ -153,7 +152,7 @@ PRODUCT_PROPERTY_OVERRIDES := \
 # be reachable from resources or other mechanisms.
 PRODUCT_PROPERTY_OVERRIDES += \
        wifi.interface=wlan0 \
-       ro.telephony.ril_class=SamsungRIL \
+       ro.telephony.ril_class=SamsungExynos3RIL \
        ro.telephony.ril.v3=icccardstatus,datacall,signalstrength,facilitylock \
        mobiledata.interfaces=pdp0,eth0,gprs,ppp0 \
        ro.vold.switchablepair=/mnt/emmc,/mnt/sdcard \
@@ -193,4 +192,6 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_COPY_FILES += \
 	device/samsung/aries-common/updater.sh:updater.sh
 
+# Wifi
+PRODUCT_PACKAGES += libnetcmdiface
 $(call inherit-product-if-exists, hardware/broadcom/wlan/bcmdhd/firmware/bcm4329/device-bcm.mk)

@@ -52,9 +52,9 @@ extern "C" {
 #define OEM_SND_SET_CLOCK_CTRL              0x0A
 
 #define OEM_SND_TYPE_VOICE                  0x01
-#define OEM_SND_TYPE_SPEAKER                0x02
-#define OEM_SND_TYPE_HEADSET                0x03
-#define OEM_SND_TYPE_BTVOICE                0x04
+#define OEM_SND_TYPE_SPEAKER                0x11
+#define OEM_SND_TYPE_HEADSET                0x31
+#define OEM_SND_TYPE_BTVOICE                0x41
 
 #define OEM_SND_AUDIO_PATH_HANDSET          0x01
 #define OEM_SND_AUDIO_PATH_HEADSET          0x02

@@ -52,9 +52,9 @@ extern "C" {
 #define OEM_SND_SET_CLOCK_CTRL              0x0A
 
 #define OEM_SND_TYPE_VOICE                  0x01
-#define OEM_SND_TYPE_SPEAKER                0x02
-#define OEM_SND_TYPE_HEADSET                0x03
-#define OEM_SND_TYPE_BTVOICE                0x04
+#define OEM_SND_TYPE_SPEAKER                0x11
+#define OEM_SND_TYPE_HEADSET                0x31
+#define OEM_SND_TYPE_BTVOICE                0x41
 
 #define OEM_SND_AUDIO_PATH_HANDSET          0x01
 #define OEM_SND_AUDIO_PATH_HEADSET          0x02
@@ -273,6 +273,7 @@ int AudioHardware::convertAudioPath(AudioPath path) {
 
 int AudioHardware::setCallVolume(HRilClient client, SoundType type, int vol) {
     char data[6] = {0,};
+    ALOGE("setCallVolume type=0x%x, vol=%d", type, vol);
     data[0] = OEM_FUNC_SOUND;
     data[1] = OEM_SND_SET_VOLUME_CTRL;
     data[2] = 0x00;
@@ -285,6 +286,7 @@ int AudioHardware::setCallVolume(HRilClient client, SoundType type, int vol) {
 
 int AudioHardware::setCallAudioPath(HRilClient client, AudioPath path) {
     char data[5] = {0,};
+    ALOGE("setCallAudioPath path=0x%x", path);
     data[0] = OEM_FUNC_SOUND;
     data[1] = OEM_SND_SET_AUDIO_PATH;
     data[2] = 0x00;

@@ -101,6 +101,10 @@ PRODUCT_PACKAGES += \
 	audio_policy.aries \
 	audio.a2dp.default \
 	libs3cjpeg
+# Charger
+PRODUCT_PACKAGES += \
+       charger \
+       charger_res_images
 
 # Libs
 PRODUCT_PACKAGES += \

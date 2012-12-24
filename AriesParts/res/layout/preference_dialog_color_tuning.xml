@@ -20,7 +20,7 @@
         <TextView android:id="@+id/color_red_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:paddingTop="10dip"
                 android:paddingLeft="20dip"
                 android:paddingRight="20dip" />
@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/color_red_seekbar"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:paddingTop="10dip"
                 android:paddingLeft="20dip"
                 android:paddingRight="20dip" />
@@ -68,7 +68,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/color_green_seekbar"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:paddingTop="10dip"
                 android:paddingLeft="20dip"
                 android:paddingRight="20dip" />
@@ -101,7 +101,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/color_tuning_preview"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:paddingTop="30dip"
                 android:paddingLeft="20dip"
                 android:paddingRight="20dip" />
@@ -125,7 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/color_red_gamma_seekbar"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:paddingTop="10dip"
                 android:paddingLeft="20dip"
                 android:paddingRight="20dip" />
@@ -149,7 +149,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/color_green_gamma_seekbar"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:paddingTop="10dip"
                 android:paddingLeft="20dip"
                 android:paddingRight="20dip" />

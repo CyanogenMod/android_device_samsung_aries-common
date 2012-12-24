@@ -20,7 +20,7 @@
         <TextView android:id="@+id/vibration_value"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:paddingTop="10dip"
                 android:paddingLeft="20dip"
                 android:paddingRight="20dip" />

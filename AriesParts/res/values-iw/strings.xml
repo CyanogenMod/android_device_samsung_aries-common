@@ -12,7 +12,7 @@
     <string name="color_green_gamma_title">תיקון גאמא ירוק</string>
     <string name="color_blue_gamma_title">תיקון גאמא כחול</string>
     <string name="mdnie_title_head">מצב mDNIe</string>
-    <string name="mdnie_summary_head">התאם אישית את אופן פעולת מנוע התמונה הטבעית הדיגיטלית</string>
+    <string name="mdnie_summary_head">התאם אישית את אופן פעולת מנוע התמונה הטבעית הדיגיטלי</string>
 
     <string name="category_touchkey_title">כפתורי מגע</string>
     <string name="backlight_timeout_title_head">תאורה אחורית</string>

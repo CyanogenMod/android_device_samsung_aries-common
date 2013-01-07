@@ -4,7 +4,7 @@
 #include <cutils/log.h>
 
 #define LOG_TAG "bdaddr"
-#define SAMSUNG_BDADDR_PATH "/efs/imei/bt.txt"
+#define SAMSUNG_BDADDR_PATH "ril.bt_macaddr"
 #define BDADDR_PATH "/data/bdaddr"
 
 /* Read bluetooth MAC from SAMSUNG_BDADDR_PATH (different format),
@@ -16,30 +16,17 @@
 int main() {
     char tmpbdaddr[23]; // bt_macaddr:xxxxxxxxxxxx
     char bdaddr[18];
-    int count;
     int fd;
 
-    fd = open(SAMSUNG_BDADDR_PATH, O_RDONLY);
-    if(fd < 0) {
-        fprintf(stderr, "open(%s) failed\n", SAMSUNG_BDADDR_PATH);
-        ALOGE("Can't open %s\n", SAMSUNG_BDADDR_PATH);
-        return -1;
-    }
-
-    count = read(fd, tmpbdaddr, sizeof(tmpbdaddr));
-    if (count < 0) {
+    property_get(SAMSUNG_BDADDR_PATH, tmpbdaddr, "");
+    if (tmpbdaddr[0] == 0) {
         fprintf(stderr, "read(%s) failed\n", SAMSUNG_BDADDR_PATH);
         ALOGE("Can't read %s\n", SAMSUNG_BDADDR_PATH);
         return -1;
     }
-    else if (count != sizeof(tmpbdaddr)) {
-        fprintf(stderr, "read(%s) unexpected size %d\n", SAMSUNG_BDADDR_PATH, count);
-        ALOGE("Error reading %s (unexpected size %d)\n", SAMSUNG_BDADDR_PATH, count);
-        return -1;
-    }
 
-    count = sprintf(bdaddr, "%2.2s:%2.2s:%2.2s:%2.2s:%2.2s:%2.2s\0",
-            tmpbdaddr+11,tmpbdaddr+13,tmpbdaddr+15,tmpbdaddr+17,tmpbdaddr+19,tmpbdaddr+21);
+    sprintf(bdaddr, "%2.2s:%2.2s:%2.2s:%2.2s:%2.2s:%2.2s\0",
+            tmpbdaddr,tmpbdaddr+2,tmpbdaddr+4,tmpbdaddr+6,tmpbdaddr+8,tmpbdaddr+10);
 
     fd = open(BDADDR_PATH, O_WRONLY|O_CREAT|O_TRUNC, 00600|00060|00006);
     if (fd < 0) {

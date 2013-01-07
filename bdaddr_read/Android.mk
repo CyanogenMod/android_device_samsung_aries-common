@@ -24,5 +24,9 @@ LOCAL_SHARED_LIBRARIES := libcutils
 
 LOCAL_MODULE := bdaddr_read
 
+ifdef BOARD_IS_CDMA
+    LOCAL_CFLAGS += -DIS_CDMA
+endif
+
 include $(BUILD_EXECUTABLE)
 

@@ -348,7 +348,7 @@ void CameraHardwareSec::initDefaultParameters(int cameraId)
         ip.set("blur", 0);
     }
 
-    p.set("iso-values", "auto,ISO50,ISO100,ISO200,ISO400,ISO800,ISO1600");
+    p.set("iso-values", "auto,ISO50,ISO100,ISO200,ISO400,ISO800,ISO1600,ISO_SPORTS,ISO_NIGHT,ISO_MOVIE");
     p.set("iso", "auto");
 
     p.set(CameraParameters::KEY_HORIZONTAL_VIEW_ANGLE, "51.2");
@@ -1584,6 +1584,12 @@ status_t CameraHardwareSec::setParameters(const CameraParameters& params)
             new_iso = ISO_800;
         } else if (!strcmp(new_iso_str, "ISO1600")) {
             new_iso = ISO_1600;
+        } else if (!strcmp(new_iso_str, "ISO_SPORTS")) {
+            new_iso = ISO_SPORTS;
+        } else if (!strcmp(new_iso_str, "ISO_NIGHT")) {
+            new_iso = ISO_NIGHT;
+        } else if (!strcmp(new_iso_str, "ISO_MOVIE")) {
+            new_iso = ISO_MOVIE;
         } else {
             ALOGE("ERR(%s):Invalid iso value(%s)", __func__, new_iso_str);
             ret = UNKNOWN_ERROR;

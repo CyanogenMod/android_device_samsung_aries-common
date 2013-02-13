@@ -100,7 +100,6 @@ PRODUCT_PACKAGES += \
 	hwcomposer.s5pc110 \
 	camera.aries \
 	audio.primary.aries \
-	audio_policy.aries \
 	audio.a2dp.default \
 	audio.usb.default \
 	libs3cjpeg

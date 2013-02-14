@@ -28,5 +28,13 @@ LOCAL_MODULE := lights.aries
 
 LOCAL_MODULE_TAGS := optional
 
+
+ifeq ($(BOARD_HAS_BUTTON_LIGHTS),true)
+    LOCAL_CFLAGS += -DBUTTON_LIGHT_CONTROL
+    ifdef BUTTON_LIGHT_PATH
+        LOCAL_CFLAGS += -DBUTTONS_FILE=\"$(BUTTON_LIGHT_PATH)\"
+    endif
+endif
+
 include $(BUILD_SHARED_LIBRARY)
 

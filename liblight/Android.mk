@@ -28,5 +28,13 @@ LOCAL_MODULE := lights.aries
 
 LOCAL_MODULE_TAGS := optional
 
+
+ifeq ($(BOARD_HAS_BUTTON_LIGHTS),true)
+    LOCAL_CFLAGS += -DBUTTON_LIGHT_CONTROL
+    ifeq ($(TARGET_DEVICE),infuse4g)
+        LOCAL_CFLAGS += -DINFUSE4G
+    endif
+endif
+
 include $(BUILD_SHARED_LIBRARY)
 

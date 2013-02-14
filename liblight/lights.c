@@ -31,6 +31,11 @@ static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
 
 char const *const LCD_FILE = "/sys/class/backlight/s5p_bl/brightness";
 char const *const LED_FILE = "/sys/class/misc/notification/led";
+#ifdef BUTTON_LIGHT_CONTROL
+#ifdef INFUSE4G
+char const *const BUTTONS_FILE = "/sys/class/misc/melfas_touchkey/brightness";
+#endif
+#endif
 
 static int write_int(char const *path, int value)
 {
@@ -98,6 +103,24 @@ static int set_light_backlight(struct light_device_t *dev,
 	return err;
 }
 
+#ifdef BUTTON_LIGHT_CONTROL
+static int set_light_buttons(struct light_device_t *dev,
+			struct light_state_t const *state)
+{
+	int touch_led_control = !!(state->color & 0x00ffffff);
+	int res;
+
+	ALOGD("set_light_buttons: color=%#010x, tlc=%u.", state->color,
+	     touch_led_control);
+
+	pthread_mutex_lock(&g_lock);
+	res = write_int(BUTTONS_FILE, touch_led_control);
+	pthread_mutex_unlock(&g_lock);
+
+	return res;
+}
+#endif
+
 static int close_lights(struct light_device_t *dev)
 {
 	ALOGV("close_light is called");
@@ -119,6 +142,10 @@ static int open_lights(const struct hw_module_t *module, char const *name,
 		set_light = set_light_backlight;
 	else if (0 == strcmp(LIGHT_ID_NOTIFICATIONS, name))
 		set_light = set_light_notifications;
+#ifdef BUTTON_LIGHT_CONTROL
+	else if (0 == strcmp(LIGHT_ID_BUTTONS, name))
+		set_light = set_light_buttons;
+#endif
 	else
 		return -EINVAL;
 

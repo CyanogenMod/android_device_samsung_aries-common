@@ -272,7 +272,7 @@ on property:ro.secure=0
 service recovery /sbin/recovery
 
 # adbd is controlled by the persist.service.adb.enable system property
-service adbd /sbin/adbd
+service adbd /sbin/adbd recovery
     disabled
 
 # Always start adbd on userdebug and eng builds

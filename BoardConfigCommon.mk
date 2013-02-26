@@ -37,7 +37,6 @@ TARGET_BOARD_PLATFORM := s5pc110
 TARGET_BOOTLOADER_BOARD_NAME := aries
 
 BOARD_MOBILEDATA_INTERFACE_NAME = "pdp0"
-BOARD_UMS_LUNFILE := /sys/class/android_usb/android0/f_mass_storage/lun/file
 
 # Kernel Source
 TARGET_KERNEL_SOURCE := kernel/samsung/aries

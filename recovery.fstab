@@ -8,7 +8,7 @@
 /cache		yaffs2		cache
 /datadata	yaffs2		datadata
 
-/sdcard		vfat		/dev/block/mmcblk0p1
+/sdcard		vfat		/dev/block/mmcblk0p1    lun=/sys/devices/platform/s3c-usbgadget/gadget/lun0/file
 /system		ext4		/dev/lvpool/system
 
-/external_sd		vfat		/dev/block/mmcblk1p1
+/external_sd		vfat		/dev/block/mmcblk1p1    lun=/sys/devices/platform/s3c-usbgadget/gadget/lun1/file

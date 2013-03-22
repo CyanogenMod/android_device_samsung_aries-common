@@ -3,7 +3,6 @@ vendor/firmware/bcm4329.hcd
 vendor/firmware/nvram_net.txt
 vendor/firmware/cypress-touchkey.bin
 vendor/firmware/samsung_mfc_fw.bin
-lib/egl/libGLES_android.so
 vendor/lib/egl/libEGL_POWERVR_SGX540_120.so
 vendor/lib/egl/libGLESv1_CM_POWERVR_SGX540_120.so
 vendor/lib/egl/libGLESv2_POWERVR_SGX540_120.so

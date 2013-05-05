@@ -1,4 +1,12 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="mdnie_entries">
+        <item>Uitgeschakeld</item>
+        <item>Gebruikersomgeving</item>
+        <item>Video</item>
+        <item>Video (warm)</item>
+        <item>Video (koud)</item>
+        <item>Camera</item>
+    </string-array>
     <string-array name="backlight_timeout_entries">
         <item>Standaard (1,6 seconden)</item>
         <item>0,5 seconden</item>
@@ -12,7 +20,7 @@
     <string-array name="hspa_entries">
         <item>Alleen UMTS</item>
         <item>Alleen HSDPA</item>
-        <item>HSDPA + HSUPA</item>
+        <item>HSDPA &amp; HSUPA</item>
     </string-array>
     <string-array name="tvout_system_entries">
         <item>NTSC</item>

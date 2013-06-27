@@ -13,14 +13,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="mdnie_entries">
         <item>Dezactivat</item>
         <item>Mod UI</item>
         <item>Mod Video</item>
         <item>Mod Video Cald</item>
         <item>Mod Video Rece</item>
-        <item>Mod Cameră</item>
+        <item>Mod Camera</item>
     </string-array>
     <string-array name="backlight_timeout_entries">
         <item>Prestabilit (1.6 s)</item>
@@ -30,7 +30,7 @@
         <item>10 s</item>
         <item>15 s</item>
         <item>30 s</item>
-        <item>Niciodată</item>
+        <item>Niciodata</item>
     </string-array>
     <string-array name="hspa_entries">
         <item>Doar UMTS</item>

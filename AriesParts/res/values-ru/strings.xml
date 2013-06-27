@@ -13,7 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Настройки Galaxy S</string>
 
     <string name="category_screen_title">Экран</string>
@@ -70,11 +70,8 @@
     <string name="vibration_title">Интенсивность вибрации</string>
     <string name="vibration_test_title">Тест</string>
 
-    <!-- Used for activity title. Usually not visible, except on the
-         multi-task screen -->
     <string name="generic_warning_title">Внимание</string>
 
-    <!-- Invalid IMEI -->
     <string name="imei_not_sane_title">Внимание!</string>
     <string name="imei_not_sane_message">Обнаружена проблема! IMEI номер не действителен. Такой IMEI номер может привести к сбоям в работе с оператором, в частности, будет невозможен вызов служб экстренной помощи.</string>
     <string name="imei_not_sane_ok">OK</string>

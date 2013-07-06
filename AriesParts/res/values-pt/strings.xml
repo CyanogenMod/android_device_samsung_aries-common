@@ -72,4 +72,5 @@
     <string name="generic_warning_title">Aviso</string>
     <string name="imei_not_sane_title">Aviso!</string>
     <string name="imei_not_sane_message">Um problema foi detectado no seu dispositivo. O número IMEI do seu dispositivo é inválido. Um número de IMEI inválido pode causar problemas de rede incluindo a impossibilidade de realizar chamadas a números de emergências.</string>
+    <string name="imei_not_sane_ok">OK</string>
 </resources>

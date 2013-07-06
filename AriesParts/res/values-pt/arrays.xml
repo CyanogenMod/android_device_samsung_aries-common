@@ -57,4 +57,12 @@
         <item>1</item>
         <item>2</item>
     </string-array>
+    <string-array name="mdnie_entries">
+        <item>Desativado</item>
+        <item>Modo IU</item>
+        <item>Modo Vídeo</item>
+        <item>Modo Vídeo Quente</item>
+        <item>Modo Vídeo Frio</item>
+        <item>Modo Câmera</item>
+    </string-array>
 </resources>

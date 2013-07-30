@@ -48,6 +48,7 @@ on fs
     mount_all fstab.aries
 
     chown radio radio /radio/modem.bin
+	# FIXME: restorecon /radio
 
 # We chown/chmod /efs because mount is run as root + defaults
     mkdir /efs 0775 radio radio
@@ -55,6 +56,7 @@ on fs
     chown radio radio /efs
     chmod 770 /efs/bluetooth
     chmod 770 /efs/imei
+    restorecon /efs
 
 # permissions for bluetooth.
     chown bluetooth net_bt_stack /dev/s3c2410_serial0
@@ -76,6 +78,7 @@ on fs
 on post-fs
     chown system system /datadata
     chmod 0771 /datadata
+    restorecon /datadata
 
     #symlinks for samsung RIL
     symlink /radio/modem.bin /dev/block/bml12

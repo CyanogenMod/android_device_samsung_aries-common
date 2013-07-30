@@ -1,0 +1,6 @@
+# We shifted /data/data stuff around
+/data/data2/.*		u:object_r:app_data_file:s0
+/datadata			u:object_r:system_data_file:s0
+
+# RIL
+/dev/s3c2410_serial3	u:object_r:radio_device:s0

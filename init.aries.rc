@@ -48,13 +48,15 @@ on fs
     mount_all fstab.aries
 
     chown radio radio /radio/modem.bin
+    exec /system/bin/restorecon -r /radio
 
 # We chown/chmod /efs because mount is run as root + defaults
     mkdir /efs 0775 radio radio
     mount yaffs2 /dev/block/mtdblock4 /efs
     chown radio radio /efs
-    chmod 770 /efs/bluetooth
+    chmod 770 /efs
     chmod 770 /efs/imei
+    exec /system/bin/restorecon -r /efs
 
 # permissions for bluetooth.
     chown bluetooth net_bt_stack /dev/s3c2410_serial0
@@ -76,6 +78,7 @@ on fs
 on post-fs
     chown system system /datadata
     chmod 0771 /datadata
+    restorecon /datadata
 
     #symlinks for samsung RIL
     symlink /radio/modem.bin /dev/block/bml12
@@ -159,6 +162,7 @@ service iprenew_bnep0 /system/bin/dhcpcd -n
 service bdaddr /system/bin/bdaddr_read
     class main
     user root
+    group system bluetooth
     disabled
     oneshot
 

@@ -1,0 +1,6 @@
+type tvoutserver, domain;
+type tvoutserver_exec, exec_type, file_type;
+
+init_daemon_domain(tvoutserver)
+binder_use(tvoutserver)
+#TODO

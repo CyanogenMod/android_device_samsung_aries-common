@@ -1,0 +1,36 @@
+# We shifted /data/data stuff around
+/data/data2/.*                                      u:object_r:app_data_file:s0
+/datadata                                           u:object_r:system_data_file:s0
+
+# RIL
+/dev/s3c2410_serial3                                u:object_r:radio_device:s0
+/dev/onedram                                        u:object_r:radio_device:s0
+/radio(/.*)?                                        u:object_r:rild_file:s0
+
+# GFX
+/dev/pvrsrvkm                                       u:object_r:powervr_device:s0
+/system/vendor/bin/pvrsrvinit                       u:object_r:pvrsrvinit_exec:s0
+
+# Sensors
+/system/vendor/bin/geomagneticd                     u:object_r:geomagneticd_exec:s0
+/system/vendor/bin/orientationd                     u:object_r:orientationd_exec:s0
+
+# Hardware codec
+/dev/s3c-mfc                                        u:object_r:mfc_device:s0
+/dev/s3c-jpg                                        u:object_r:mfc_device:s0
+
+# GPS
+/dev/s3c2410_serial1                                u:object_r:gps_device:s0
+
+# TODO: tvoutserver, tvouthack, bdaddr_read
+# TODO: restorecon -r /efs, /radio
+# TODO: secure /efs permissions
+
+# Advanced settings (TODO: doesn't seem to get set without restorecon)
+# TODO: also need to secure the permission of (some of) these devices
+/sys/class/misc/notification/bl_timeout             u:object_r:sysfs_writable:s0
+/sys/class/misc/pwm_duty/pwm_duty                   u:object_r:sysfs_writable:s0
+/sys/class/mdnieset_ui/switch_mdnieset_ui/mdnieset_ui_file_cmd  u:object_r:sysfs_writable:s0
+/sys/class/misc/dockaudio/(.*)_enable               u:object_r:sysfs_writable:s0
+/sys/devices/virtual/misc/color_tuning/(.*)         u:object_r:sysfs_writable:s0
+/sys/devices/virtual/misc/voodoo_sound/(.*)         u:object_r:sysfs_writable:s0

@@ -7,5 +7,5 @@
 /dev/lvpool/system         /system               ext4      ro   wait
 /dev/lvpool/userdata       /data                 ext4      noatime,nodev,nosuid,nomblk_io_submit,errors=panic   wait,encryptable=footer
 
-/devices/platform/s3c-sdhci.0/mmc_host/mmc0 /storage/sdcard0 auto defaults voldmanaged=sdcard0:auto
+/devices/platform/s3c-sdhci.0/mmc_host/mmc0 /storage/sdcard0 auto defaults voldmanaged=sdcard0:1,nonremovable
 /devices/platform/s3c-sdhci.2/mmc_host/mmc2 /storage/sdcard1 auto defaults voldmanaged=sdcard1:auto

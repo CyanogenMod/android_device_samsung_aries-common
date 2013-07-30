@@ -9,12 +9,11 @@ PATH=/system/bin/:/system/xbin/
 
 function migrate_datadata {
     # Migrate data from /datadata to /data/data
-    if test -h /data/data ; then
-        rm /data/data
-        mkdir /data/data
-        chown system.system /data/data
-        chmod 0771 /data/data
-        cp -a /datadata/* /data/data/
+    if test -d /datadata/com.android.settings ; then
+        busybox mv -f /datadata/* /data/data/
+        # FIXME: restorecon might not restore the same context as original
+        # (remove when busybox has SELinux support)
+        restorecon -r /data/data
         touch /data/data/.nodatadata
         rm -r /data/data/lost+found
         busybox umount /datadata
@@ -27,10 +26,15 @@ function migrate_cache {
     if test -e /data/data/$1 ; then
         if ! test -h /data/data/$1/cache ; then
             OWNER="`ls -ld /data/data/$1/ | awk '{print $3}'`"
+            CONTEXT="`ls -Zd /data/data/$1/ | awk '{print $4}'`"
             rm -r /data/data2/$1 # In case it exists
             mkdir -p /data/data2/$1
             chmod 751 /data/data2/$1
+            chcon $CONTEXT /data/data2/$1
             busybox mv -f /data/data/$1/cache /data/data2/$1/
+            # FIXME: restorecon might not restore the same context as original
+            # (remove when busybox has SELinux support)
+            restorecon -r /data/data2/$1/*
             ln -s /data/data2/$1/cache /data/data/$1/cache
             chown $OWNER.$OWNER /data/data2/$1 /data/data2/$1/cache
             busybox chown -h $OWNER.$OWNER /data/data/$1/cache
@@ -47,14 +51,21 @@ function migrate_cache {
 CRYPTO_STATE="`getprop ro.crypto.state`"
 VOLD_DECRYPT="`getprop vold.decrypt`"
 
+if test -h /data/data ; then
+    # Handle pre-CM 10.2 symlink
+    rm /data/data
+    mkdir /data/data
+    chown system.system /data/data
+    chmod 0771 /data/data
+fi
+
 if test "$CRYPTO_STATE" = "unencrypted" ; then
     if test "$VOLD_DECRYPT" = "" ; then
         # Normal unencrypted boot
-        if test -e /data/data/.nodatadata ; then
+        if test -e /datadata/.nodatadata || test -e /data/data/.nodatadata ; then
             migrate_datadata
         else
-            rmdir /data/data
-            ln -s /datadata /data/data
+            mount -o bind /datadata /data/data
 
             # Migrate download provider's cache out of /data/data because that's where market stores its downloads
             migrate_cache com.android.providers.downloads

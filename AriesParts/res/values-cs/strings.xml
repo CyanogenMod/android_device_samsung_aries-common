@@ -28,9 +28,9 @@
     <string name="mdnie_title_head">Režim mDNIe</string>
     <string name="mdnie_summary_head">Upravit mDNIe</string>
 
-    <string name="category_touchkey_title">Dotykové klávesy</string>
+    <string name="category_touchkey_title">Dotyková tlačítka</string>
     <string name="backlight_timeout_title_head">Trvání podsvícení</string>
-    <string name="backlight_timeout_summary_head">Nastavení trvání podsvícení klávesy po dotyku</string>
+    <string name="backlight_timeout_summary_head">Nastavení trvání podsvícení tlačítka po dotyku</string>
 
     <string name="category_radio_title">Rádio</string>
     <string name="hspa_title_head">HSPA</string>

@@ -96,6 +96,8 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/aries-common/recovery/graphics.c
 BOARD_USES_BML_OVER_MTD := true
 BOARD_CUSTOM_BOOTIMG_MK := device/samsung/aries-common/shbootimg.mk
+TARGET_RECOVERY_FSTAB := device/samsung/aries-common/fstab.aries
+RECOVERY_FSTAB_VERSION := 2
 
 # Boot Animation
 TARGET_BOOTANIMATION_PRELOAD := true

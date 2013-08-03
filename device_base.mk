@@ -162,6 +162,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
        mobiledata.interfaces=pdp0,eth0,gprs,ppp0 \
        ro.vold.switchablepair=/mnt/emmc,/mnt/sdcard \
 
+# GPU producer to CPU consumer not supported
+PRODUCT_PROPERTY_OVERRIDES += \
+       ro.bq.gpu_to_cpu_unsupported=1
+
 # enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
 PRODUCT_PROPERTY_OVERRIDES += \

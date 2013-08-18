@@ -17,14 +17,6 @@
     <string name="app_name">Configurações avançadas</string>
 
     <string name="category_screen_title">Tela</string>
-    <string name="color_tuning_title_head">Ajuste de Cor</string>
-    <string name="color_tuning_summary_head">Calibrar as cores da tela</string>
-    <string name="color_red_title">Vermelho</string>
-    <string name="color_green_title">Verde</string>
-    <string name="color_blue_title">Azul</string>
-    <string name="color_red_gamma_title">Gama Vermelha</string>
-    <string name="color_green_gamma_title">Gama Verde</string>
-    <string name="color_blue_gamma_title">Gama Azul</string>
 
     <string name="category_touchkey_title">Botões Touch</string>
     <string name="backlight_timeout_title_head">Tempo Limite da Iluminação</string>
@@ -62,11 +54,6 @@
     <string name="deskdock_audio_summary_on">Aúdio do dock de mesa ativado</string>
     <string name="deskdock_audio_summary_off">Aúdio do dock de mesa desativado</string>
 
-    <string name="category_vibration_title">Vibração</string>
-    <string name="vibration_title_head">Vibração</string>
-    <string name="vibration_summary_head">Controlar Intensidade de Vibração</string>
-    <string name="vibration_title">Intensidade da Vibraçao</string>
-    <string name="vibration_test_title">Testar</string>
     <string name="button_reset_title">Resetar</string>
 
     <string name="generic_warning_title">Aviso</string>

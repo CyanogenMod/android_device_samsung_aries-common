@@ -25,27 +25,10 @@
         <item>Nunca</item>
     </string-array>
 
-    <string-array name="backlight_timeout_entries_values" translatable="false">
-        <item>1600</item>
-        <item>500</item>
-        <item>2000</item>
-        <item>5000</item>
-        <item>10000</item>
-        <item>15000</item>
-        <item>30000</item>
-        <item>-1</item>
-    </string-array>
-
     <string-array name="hspa_entries">
         <item>UMTS Apenas</item>
         <item>HSDPA Apenas</item>
         <item>HSDPA + HSUPA</item>
-    </string-array>
-
-    <string-array name="hspa_entries_values" translatable="false">
-        <item>21</item>
-        <item>22</item>
-        <item>23</item>
     </string-array>
 
     <string-array name="tvout_system_entries">
@@ -53,10 +36,6 @@
         <item>PAL</item>
     </string-array>
 
-    <string-array name="tvout_system_entries_values" translatable="false">
-        <item>1</item>
-        <item>2</item>
-    </string-array>
     <string-array name="mdnie_entries">
         <item>Desativado</item>
         <item>Modo IU</item>

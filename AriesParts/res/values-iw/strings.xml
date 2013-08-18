@@ -17,14 +17,6 @@
     <string name="app_name">הגדרות Galaxy S</string>
 
     <string name="category_screen_title">מסך</string>
-    <string name="color_tuning_title_head">כיול צבעים</string>
-    <string name="color_tuning_summary_head">כיל את צבעי המסך</string>
-    <string name="color_red_title">אדום</string>
-    <string name="color_green_title">ירוק</string>
-    <string name="color_blue_title">כחול</string>
-    <string name="color_red_gamma_title">תיקון גאמא אדום</string>
-    <string name="color_green_gamma_title">תיקון גאמא ירוק</string>
-    <string name="color_blue_gamma_title">תיקון גאמא כחול</string>
     <string name="mdnie_title_head">מצב mDNIe</string>
     <string name="mdnie_summary_head">התאם אישית את אופן פעולת מנוע התמונה הטבעית הדיגיטלי</string>
 
@@ -63,12 +55,6 @@
     <string name="deskdock_audio_title_head">תחנת עגינה שולחנית</string>
     <string name="deskdock_audio_summary_on">קול בתחנת עגינה שולחנית מופעל</string>
     <string name="deskdock_audio_summary_off">קול בתחנת עגינה שולחנית מושבת</string>
-
-    <string name="category_vibration_title">רטט</string>
-    <string name="vibration_title_head">רטט</string>
-    <string name="vibration_summary_head">שלוט בעוצמת הרטט</string>
-    <string name="vibration_title">עוצמת רטט</string>
-    <string name="vibration_test_title">בדיקה</string>
 
     <string name="button_reset_title">איפוס</string>
 

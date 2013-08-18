@@ -17,14 +17,6 @@
     <string name="app_name">Pokročilé nastavení</string>
 
     <string name="category_screen_title">Obrazovka</string>
-    <string name="color_tuning_title_head">Ladění barev</string>
-    <string name="color_tuning_summary_head">Kalibrovat barvy obrazovky</string>
-    <string name="color_red_title">Červená</string>
-    <string name="color_green_title">Zelená</string>
-    <string name="color_blue_title">Modrá</string>
-    <string name="color_red_gamma_title">Červená gamma</string>
-    <string name="color_green_gamma_title">Zelená gamma</string>
-    <string name="color_blue_gamma_title">Modrá gamma</string>
     <string name="mdnie_title_head">Režim mDNIe</string>
     <string name="mdnie_summary_head">Upravit mDNIe</string>
 
@@ -63,12 +55,6 @@
     <string name="deskdock_audio_title_head">Stolní dok</string>
     <string name="deskdock_audio_summary_on">Zvuk pro stolní dok povolen</string>
     <string name="deskdock_audio_summary_off">Zvuk pro stolní dok zakázán</string>
-
-    <string name="category_vibration_title">Vibrace</string>
-    <string name="vibration_title_head">Vibrace</string>
-    <string name="vibration_summary_head">Ovládání intenzity vibrací</string>
-    <string name="vibration_title">Intenzita vibrací</string>
-    <string name="vibration_test_title">Test</string>
 
     <string name="button_reset_title">Obnovit</string>
 

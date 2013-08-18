@@ -17,14 +17,6 @@
     <string name="app_name">Zaawansowane ustawienia</string>
 
     <string name="category_screen_title">Ekran</string>
-    <string name="color_tuning_title_head">Kalibracja kolorów</string>
-    <string name="color_tuning_summary_head">Kalibruj kolory ekranu</string>
-    <string name="color_red_title">Czerwony</string>
-    <string name="color_green_title">Zielony</string>
-    <string name="color_blue_title">Niebieski</string>
-    <string name="color_red_gamma_title">Czerwony (gamma)</string>
-    <string name="color_green_gamma_title">Zielony (gamma)</string>
-    <string name="color_blue_gamma_title">Niebieski (gamma)</string>
     <string name="mdnie_title_head">Tryb mDNIe</string>
     <string name="mdnie_summary_head">Dostosuj końcowe przetwarzanie trybu mDNIe</string>
 
@@ -63,12 +55,6 @@
     <string name="deskdock_audio_title_head">Stacja dokująca</string>
     <string name="deskdock_audio_summary_on">Dźwięk w stacji dokującej włączony</string>
     <string name="deskdock_audio_summary_off">Dźwięk w stacji dokującej wyłączony</string>
-
-    <string name="category_vibration_title">Wibracje</string>
-    <string name="vibration_title_head">Wibracje</string>
-    <string name="vibration_summary_head">Kontroluj intensywność wibracji</string>
-    <string name="vibration_title">Intensywność wibracji</string>
-    <string name="vibration_test_title">Testuj</string>
 
     <string name="button_reset_title">Resetuj</string>
 

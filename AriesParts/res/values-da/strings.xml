@@ -17,14 +17,6 @@
     <string name="app_name">Galaxy S-indstillinger</string>
 
     <string name="category_screen_title">Skærm</string>
-    <string name="color_tuning_title_head">Farvejustering</string>
-    <string name="color_tuning_summary_head">Kalibrér skærmfarve</string>
-    <string name="color_red_title">Rød</string>
-    <string name="color_green_title">Grøn</string>
-    <string name="color_blue_title">Blå</string>
-    <string name="color_red_gamma_title">Rød gamma</string>
-    <string name="color_green_gamma_title">Grøn gamma</string>
-    <string name="color_blue_gamma_title">Blå gamma</string>
     <string name="mdnie_title_head">mDNIe-tilstand</string>
     <string name="mdnie_summary_head">Justér mDNIe-skærm-post-processering</string>
 
@@ -63,12 +55,6 @@
     <string name="deskdock_audio_title_head">Skrivebordsdock</string>
     <string name="deskdock_audio_summary_on">Lyd til skrivebordsdock slået til</string>
     <string name="deskdock_audio_summary_off">Lyd til skrivebordsdock slået fra</string>
-
-    <string name="category_vibration_title">Vibration</string>
-    <string name="vibration_title_head">Vibration</string>
-    <string name="vibration_summary_head">Kontrollér vibrationsintensitet</string>
-    <string name="vibration_title">Vibrationsintensitet</string>
-    <string name="vibration_test_title">Test</string>
 
     <string name="button_reset_title">Nulstil</string>
 

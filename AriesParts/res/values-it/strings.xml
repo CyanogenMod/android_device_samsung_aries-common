@@ -16,14 +16,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Impostazioni Galaxy S</string>
     <string name="category_screen_title">Display</string>
-    <string name="color_tuning_title_head">Calibrazione colori</string>
-    <string name="color_tuning_summary_head">Calibra colori display</string>
-    <string name="color_red_title">Rosso</string>
-    <string name="color_green_title">Verde</string>
-    <string name="color_blue_title">Blu</string>
-    <string name="color_red_gamma_title">Gamma Rosso</string>
-    <string name="color_green_gamma_title">Gamma Verde</string>
-    <string name="color_blue_gamma_title">Gamma Blu</string>
     <string name="mdnie_title_head">Modalità mDNIe</string>
     <string name="mdnie_summary_head">Imposta grado di post-processamento del display</string>
     <string name="category_touchkey_title">Tasti a sfioramento</string>
@@ -57,11 +49,6 @@
     <string name="deskdock_audio_title_head">Dock da tavolo</string>
     <string name="deskdock_audio_summary_on">Audio dock da tavolo attivato</string>
     <string name="deskdock_audio_summary_off">Audio dock da tavolo disattivato</string>
-    <string name="category_vibration_title">Vibrazione</string>
-    <string name="vibration_title_head">Vibrazione</string>
-    <string name="vibration_summary_head">Controllo intensità vibrazione</string>
-    <string name="vibration_title">Intensità vibrazione</string>
-    <string name="vibration_test_title">Prova</string>
     <string name="button_reset_title">Ripristina</string>
     <string name="generic_warning_title">Attenzione</string>
     <string name="imei_not_sane_title">Attenzione!</string>

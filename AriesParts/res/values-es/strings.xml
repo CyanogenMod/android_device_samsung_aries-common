@@ -16,14 +16,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Ajustes avanzados</string>
     <string name="category_screen_title">Pantalla</string>
-    <string name="color_tuning_title_head">Color</string>
-    <string name="color_tuning_summary_head">Calibrar el color de pantalla</string>
-    <string name="color_red_title">Rojo</string>
-    <string name="color_green_title">Verde</string>
-    <string name="color_blue_title">Azul</string>
-    <string name="color_red_gamma_title">Gamma rojo</string>
-    <string name="color_green_gamma_title">Gamma verde</string>
-    <string name="color_blue_gamma_title">Gamma azul</string>
     <string name="mdnie_title_head">Modo mDNIe</string>
     <string name="mdnie_summary_head">Ajustar post-procesado de pantalla para mDNIe</string>
     <string name="category_touchkey_title">Teclas táctiles</string>
@@ -57,11 +49,6 @@
     <string name="deskdock_audio_title_head">Audio de escritorio</string>
     <string name="deskdock_audio_summary_on">Conector de audio de escritorio habilitado</string>
     <string name="deskdock_audio_summary_off">Conector de audio de escritorio deshabilitado</string>
-    <string name="category_vibration_title">Vibración</string>
-    <string name="vibration_title_head">Vibración</string>
-    <string name="vibration_summary_head">Control de intensidad de vibración</string>
-    <string name="vibration_title">Intensidad de vibración</string>
-    <string name="vibration_test_title">Probar</string>
     <string name="button_reset_title">Restablecer</string>
     <string name="generic_warning_title">Aviso</string>
     <string name="imei_not_sane_title">¡Aviso!</string>

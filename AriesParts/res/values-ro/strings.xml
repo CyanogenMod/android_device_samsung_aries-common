@@ -16,14 +16,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Setări Galaxy S</string>
   <string name="category_screen_title">Ecran</string>
-  <string name="color_tuning_title_head">Reglaj Culori</string>
-  <string name="color_tuning_summary_head">Calibraţi culorile ecranului</string>
-  <string name="color_red_title">Roşu</string>
-  <string name="color_green_title">Verde</string>
-  <string name="color_blue_title">Albastru</string>
-  <string name="color_red_gamma_title">Gamma Roşu</string>
-  <string name="color_green_gamma_title">Gamma Verde</string>
-  <string name="color_blue_gamma_title">Gamma Albastru</string>
   <string name="mdnie_title_head">Mod mDNIe</string>
   <string name="mdnie_summary_head">Reglaj post-procesare mDNIe</string>
   <string name="category_touchkey_title">Butoane Senzoriale</string>
@@ -57,11 +49,6 @@
   <string name="cardock_audio_summary_off">Audio pentru car dock dezactivat</string>
   <string name="deskdock_audio_summary_on">Audio pentru desk dock activat</string>
   <string name="deskdock_audio_summary_off">Audio pentru desk dock dezactivat</string>
-  <string name="category_vibration_title">Vibrare</string>
-  <string name="vibration_title_head">Vibrare</string>
-  <string name="vibration_summary_head">Control intensitate vibraţii</string>
-  <string name="vibration_title">Intesitate vibraţii</string>
-  <string name="vibration_test_title">Testaţi</string>
   <string name="button_reset_title">Resetați</string>
   <string name="generic_warning_title">Avertisment</string>
   <string name="imei_not_sane_message">A fost detectată o problemă la dispozitivul dvs. IMEI-ul dispozitivului nu este valid. Un IMEI nevalid poate provoca probleme de reţea inclusiv incapacitatea de a apela nr. de urgenţă.</string>

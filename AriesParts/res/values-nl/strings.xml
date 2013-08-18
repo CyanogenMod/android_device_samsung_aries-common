@@ -16,14 +16,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Geavanceerde instellingen</string>
     <string name="category_screen_title">Scherm</string>
-    <string name="color_tuning_title_head">Kleuren regelen</string>
-    <string name="color_tuning_summary_head">Schermkleur kalibreren</string>
-    <string name="color_red_title">Rood</string>
-    <string name="color_green_title">Groen</string>
-    <string name="color_blue_title">Blauw</string>
-    <string name="color_red_gamma_title">Rood gamma</string>
-    <string name="color_green_gamma_title">Groen gamma</string>
-    <string name="color_blue_gamma_title">Blauw gamma</string>
     <string name="mdnie_title_head">mDNIe-modus</string>
     <string name="mdnie_summary_head">mDNIe-schermnabewerking aanpassen</string>
     <string name="category_touchkey_title">Aanraakknoppen</string>
@@ -57,11 +49,6 @@
     <string name="deskdock_audio_title_head">Bureau-dock</string>
     <string name="deskdock_audio_summary_on">Bureau-dock-geluid ingeschakeld</string>
     <string name="deskdock_audio_summary_off">Bureau-dock-geluid uitgeschakeld</string>
-    <string name="category_vibration_title">Trillen</string>
-    <string name="vibration_title_head">Trillen</string>
-    <string name="vibration_summary_head">Trilintensiteit instellen</string>
-    <string name="vibration_title">Trilintensiteit</string>
-    <string name="vibration_test_title">Testen</string>
     <string name="button_reset_title">Herstellen</string>
     <string name="generic_warning_title">Let op</string>
     <string name="imei_not_sane_title">Let op</string>

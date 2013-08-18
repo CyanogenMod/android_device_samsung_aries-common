@@ -14,7 +14,6 @@ import android.preference.PreferenceCategory;
 
 public class DeviceSettings extends PreferenceActivity  {
 
-    public static final String KEY_COLOR_TUNING = "color_tuning";
     public static final String KEY_MDNIE = "mdnie";
     public static final String KEY_BACKLIGHT_TIMEOUT = "backlight_timeout";
     public static final String KEY_HSPA = "hspa";
@@ -27,9 +26,7 @@ public class DeviceSettings extends PreferenceActivity  {
     public static final String KEY_CARDOCK_AUDIO = "cardock_audio";
     public static final String KEY_DESKDOCK_AUDIO = "deskdock_audio";
     public static final String KEY_DOCK_AUDIO_CATEGORY = "category_dock_audio";
-    public static final String KEY_VIBRATION = "vibration";
 
-    private ColorTuningPreference mColorTuning;
     private ListPreference mMdnie;
     private ListPreference mBacklightTimeout;
     private ListPreference mHspa;
@@ -39,7 +36,6 @@ public class DeviceSettings extends PreferenceActivity  {
     private VolumeBoostPreference mVolumeBoost;
     private CheckBoxPreference mCarDockAudio;
     private CheckBoxPreference mDeskDockAudio;
-    private VibrationPreference mVibration;
 
     private BroadcastReceiver mHeadsetReceiver = new BroadcastReceiver() {
 
@@ -55,9 +51,6 @@ public class DeviceSettings extends PreferenceActivity  {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         addPreferencesFromResource(R.xml.main);
-
-        mColorTuning = (ColorTuningPreference) findPreference(KEY_COLOR_TUNING);
-        mColorTuning.setEnabled(ColorTuningPreference.isSupported());
 
         mMdnie = (ListPreference) findPreference(KEY_MDNIE);
         mMdnie.setEnabled(Mdnie.isSupported());
@@ -94,9 +87,6 @@ public class DeviceSettings extends PreferenceActivity  {
             category.removePreference(mDeskDockAudio);
             getPreferenceScreen().removePreference(category);
         }
-
-        mVibration = (VibrationPreference) findPreference(KEY_VIBRATION);
-        mVibration.setEnabled(VibrationPreference.isSupported());
 
         mTvOut = new TvOut();
         mTvOutEnable = (CheckBoxPreference) findPreference(KEY_TVOUT_ENABLE);

@@ -17,14 +17,6 @@
     <string name="app_name">Настройки Galaxy S</string>
 
     <string name="category_screen_title">Экран</string>
-    <string name="color_tuning_title_head">Настройки цвета</string>
-    <string name="color_tuning_summary_head">Настройте экранные цвета</string>
-    <string name="color_red_title">Красный</string>
-    <string name="color_green_title">Зеленый</string>
-    <string name="color_blue_title">Синий</string>
-    <string name="color_red_gamma_title">Гамма красного</string>
-    <string name="color_green_gamma_title">Гамма зеленого</string>
-    <string name="color_blue_gamma_title">Гамма синего</string>
     <string name="mdnie_title_head">Режим mDNIe</string>
     <string name="mdnie_summary_head">Настройте пост-обработку mDNIe</string>
 
@@ -63,12 +55,6 @@
     <string name="deskdock_audio_title_head">Настольная док-станция</string>
     <string name="deskdock_audio_summary_on">Настольная док-станция подключена</string>
     <string name="deskdock_audio_summary_off">Настольная док-станция отключена</string>
-
-    <string name="category_vibration_title">Вибрация</string>
-    <string name="vibration_title_head">Интенсивность</string>
-    <string name="vibration_summary_head">Настройка интенсивности вибрации</string>
-    <string name="vibration_title">Интенсивность вибрации</string>
-    <string name="vibration_test_title">Тест</string>
 
     <string name="generic_warning_title">Внимание</string>
 

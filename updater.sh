@@ -8,11 +8,12 @@
 SYSTEM_SIZE='629145600' # 600M
 
 check_mount() {
-    if ! /tmp/busybox grep -q $1 /proc/mounts ; then
-        /tmp/busybox mkdir -p $1
+    MOUNT_POINT=`/tmp/busybox readlink -f $1`
+    if ! /tmp/busybox grep -q $MOUNT_POINT /proc/mounts ; then
+        /tmp/busybox mkdir -p $MOUNT_POINT
         /tmp/busybox umount -l $2
-        if ! /tmp/busybox mount -t $3 $2 $1 ; then
-            /tmp/busybox echo "Cannot mount $1."
+        if ! /tmp/busybox mount -t $3 $2 $MOUNT_POINT ; then
+            /tmp/busybox echo "Cannot mount $1 ($MOUNT_POINT)."
             exit 1
         fi
     fi

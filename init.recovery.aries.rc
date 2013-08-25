@@ -1,5 +1,10 @@
 import usb.rc # Renamed init.aries.usb.rc, we can't use init*.rc because the build script will delete it
 
+on init
+    # legacy symlink
+    rmdir /emmc
+    symlink /storage/sdcard1 /emmc
+
 on fs
 # set up LVM volumes
     exec /lvm/sbin/lvm vgscan --mknodes --ignorelockingfailure

@@ -8,7 +8,7 @@
 SYSTEM_SIZE='629145600' # 600M
 
 check_mount() {
-    local MOUNT_POINT=`/tmp/busybox readlink -f $1`
+    local MOUNT_POINT=`/tmp/busybox readlink $1`
     if ! /tmp/busybox test -n "$MOUNT_POINT" ; then
         # readlink does not work on older recoveries for some reason
         # doesn't matter since the path is already correct in that case

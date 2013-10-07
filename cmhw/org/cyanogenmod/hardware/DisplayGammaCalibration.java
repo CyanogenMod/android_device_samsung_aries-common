@@ -34,11 +34,11 @@ public class DisplayGammaCalibration {
         return 1;
     }
 
-    public static int getMaxValue()  {
+    public static int getMaxValue(int control)  {
         return 40;
     }
 
-    public static int getMinValue()  {
+    public static int getMinValue(int control)  {
         return 0;
     }
 

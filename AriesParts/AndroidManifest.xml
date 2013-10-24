@@ -7,7 +7,7 @@
    <application android:label="@string/app_name"
                 android:icon="@drawable/icon"
                 android:supportsRtl="true">
-      <activity android:name=".DeviceSettings"
+      <activity android:name=".DisplaySettings"
                 android:label="@string/app_name">
       </activity>
       <receiver android:name=".Startup">

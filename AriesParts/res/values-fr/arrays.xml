@@ -22,21 +22,6 @@
         <item>Vidéo froide</item>
         <item>Caméra</item>
     </string-array>
-    <string-array name="backlight_timeout_entries">
-        <item>Défaut (1.6 seconde)</item>
-        <item>0.5 seconde</item>
-        <item>2 secondes</item>
-        <item>5 secondes</item>
-        <item>10 secondes</item>
-        <item>15 secondes</item>
-        <item>30 secondes</item>
-        <item>Jamais</item>
-    </string-array>
-    <string-array name="hspa_entries">
-        <item>UMTS seulement</item>
-        <item>HSDPA seulement</item>
-        <item>HSDPA + HSUPA</item>
-    </string-array>
     <string-array name="tvout_system_entries">
         <item>NTSC</item>
         <item>PAL</item>

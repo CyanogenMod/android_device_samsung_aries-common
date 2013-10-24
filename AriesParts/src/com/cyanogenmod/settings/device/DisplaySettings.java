@@ -12,7 +12,7 @@ import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
 
-public class DeviceSettings extends PreferenceActivity  {
+public class DisplaySettings extends PreferenceActivity  {
 
     public static final String KEY_MDNIE = "mdnie";
     public static final String KEY_BACKLIGHT_TIMEOUT = "backlight_timeout";
@@ -28,14 +28,9 @@ public class DeviceSettings extends PreferenceActivity  {
     public static final String KEY_DOCK_AUDIO_CATEGORY = "category_dock_audio";
 
     private ListPreference mMdnie;
-    private ListPreference mBacklightTimeout;
-    private ListPreference mHspa;
     private CheckBoxPreference mTvOutEnable;
     private ListPreference mTvOutSystem;
     private TvOut mTvOut;
-    private VolumeBoostPreference mVolumeBoost;
-    private CheckBoxPreference mCarDockAudio;
-    private CheckBoxPreference mDeskDockAudio;
 
     private BroadcastReceiver mHeadsetReceiver = new BroadcastReceiver() {
 
@@ -56,38 +51,6 @@ public class DeviceSettings extends PreferenceActivity  {
         mMdnie.setEnabled(Mdnie.isSupported());
         mMdnie.setOnPreferenceChangeListener(new Mdnie());
 
-        mBacklightTimeout = (ListPreference) findPreference(KEY_BACKLIGHT_TIMEOUT);
-        mBacklightTimeout.setEnabled(TouchKeyBacklightTimeout.isSupported());
-        mBacklightTimeout.setOnPreferenceChangeListener(new TouchKeyBacklightTimeout());
-
-        mHspa = (ListPreference) findPreference(KEY_HSPA);
-        if (Hspa.isSupported()) {
-           mHspa.setOnPreferenceChangeListener(new Hspa(this));
-        } else {
-           PreferenceCategory category = (PreferenceCategory) getPreferenceScreen().findPreference(KEY_HSPA_CATEGORY);
-           category.removePreference(mHspa);
-           getPreferenceScreen().removePreference(category);
-        }
-
-        mVolumeBoost = (VolumeBoostPreference) findPreference(KEY_VOLUME_BOOST);
-        if (!VolumeBoostPreference.isSupported()) {
-            PreferenceCategory category = (PreferenceCategory) getPreferenceScreen().findPreference(KEY_VOLUME_CATEGORY);
-            category.removePreference(mVolumeBoost);
-            getPreferenceScreen().removePreference(category);
-        }
-
-        mCarDockAudio = (CheckBoxPreference) findPreference(KEY_CARDOCK_AUDIO);
-        mDeskDockAudio = (CheckBoxPreference) findPreference(KEY_DESKDOCK_AUDIO);
-        if (DockAudio.isSupported()) {
-            mCarDockAudio.setOnPreferenceChangeListener(new DockAudio());
-            mDeskDockAudio.setOnPreferenceChangeListener(new DockAudio());
-        } else {
-            PreferenceCategory category = (PreferenceCategory) getPreferenceScreen().findPreference(KEY_DOCK_AUDIO_CATEGORY);
-            category.removePreference(mCarDockAudio);
-            category.removePreference(mDeskDockAudio);
-            getPreferenceScreen().removePreference(category);
-        }
-
         mTvOut = new TvOut();
         mTvOutEnable = (CheckBoxPreference) findPreference(KEY_TVOUT_ENABLE);
         mTvOutSystem = (ListPreference) findPreference(KEY_TVOUT_SYSTEM);
@@ -100,7 +63,7 @@ public class DeviceSettings extends PreferenceActivity  {
                 @Override
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     boolean enable = (Boolean) newValue;
-                    Intent i = new Intent(DeviceSettings.this, TvOutService.class);
+                    Intent i = new Intent(DisplaySettings.this, TvOutService.class);
                     i.putExtra(TvOutService.EXTRA_COMMAND, enable ? TvOutService.COMMAND_ENABLE : TvOutService.COMMAND_DISABLE);
                     startService(i);
                     return true;
@@ -114,7 +77,7 @@ public class DeviceSettings extends PreferenceActivity  {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     if (mTvOut._isEnabled()) {
                         int newSystem = Integer.valueOf((String) newValue);
-                        Intent i = new Intent(DeviceSettings.this, TvOutService.class);
+                        Intent i = new Intent(DisplaySettings.this, TvOutService.class);
                         i.putExtra(TvOutService.EXTRA_COMMAND, TvOutService.COMMAND_CHANGE_SYSTEM);
                         i.putExtra(TvOutService.EXTRA_SYSTEM, newSystem);
                         startService(i);

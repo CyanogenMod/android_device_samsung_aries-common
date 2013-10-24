@@ -23,23 +23,6 @@
         <item>Kamera</item>
     </string-array>
 
-    <string-array name="backlight_timeout_entries">
-        <item>Domyślnie (1.6 sekundy)</item>
-        <item>0.5 sekundy</item>
-        <item>2 sekundy</item>
-        <item>5 sekund</item>
-        <item>10 sekund</item>
-        <item>15 sekund</item>
-        <item>30 sekund</item>
-        <item>Nigdy</item>
-    </string-array>
-
-    <string-array name="hspa_entries">
-        <item>Tylko UMTS</item>
-        <item>Tylko HSDPA</item>
-        <item>HSDPA + HSUPA</item>
-    </string-array>
-
     <string-array name="tvout_system_entries">
         <item>NTSC</item>
         <item>PAL</item>

@@ -14,31 +14,6 @@
 	</PreferenceCategory>
 
 	<PreferenceCategory
-    	android:title="@string/category_touchkey_title">
-	    <!-- Touch key backlight timeout -->
-	    <ListPreference 
-	        android:key="backlight_timeout"
-	        android:title="@string/backlight_timeout_title_head"
-	        android:summary="@string/backlight_timeout_summary_head"
-	        android:entries="@array/backlight_timeout_entries"
-  			android:entryValues="@array/backlight_timeout_entries_values"
-  			android:defaultValue="1600" />
-	</PreferenceCategory>
-
-	<PreferenceCategory
-        android:title="@string/category_radio_title"
-        android:key="category_radio">
-	    <!-- UMTS/HSDPA/HSUPA settings -->
-	    <ListPreference
-	        android:key="hspa"
-	        android:title="@string/hspa_title_head"
-	        android:summary="@string/hspa_summary_head"
-	        android:entries="@array/hspa_entries"
-            android:entryValues="@array/hspa_entries_values"
-            android:defaultValue="23" />
-	</PreferenceCategory>
-
-	<PreferenceCategory
                 android:title="@string/category_tvout_title"
                 android:key="category_tvout">
 		<CheckBoxPreference
@@ -56,33 +31,5 @@
 			android:entryValues="@array/tvout_system_entries_values"
 			android:defaultValue="2" />
 	</PreferenceCategory>
-
-        <PreferenceCategory
-            android:title="@string/category_volume_boost_title"
-            android:key="category_volume_boost">
-                <!-- Volume Boost -->
-                <com.cyanogenmod.settings.device.VolumeBoostPreference
-                android:key="volume_boost"
-                android:title="@string/volume_boost_title_head"
-                android:summary="@string/volume_boost_summary_head" />
-	</PreferenceCategory>
-
-        <PreferenceCategory
-            android:title="@string/category_dock_audio_title"
-            android:key="category_dock_audio">
-            <!-- Dock Audio -->
-            <CheckBoxPreference
-                android:key="cardock_audio"
-                android:title="@string/cardock_audio_title_head"
-                android:summaryOn="@string/cardock_audio_summary_on"
-                android:summaryOff="@string/cardock_audio_summary_off"
-                android:persistent="true" />
-            <CheckBoxPreference
-                android:key="deskdock_audio"
-                android:title="@string/deskdock_audio_title_head"
-                android:summaryOn="@string/deskdock_audio_summary_on"
-                android:summaryOff="@string/deskdock_audio_summary_off"
-                android:persistent="true" />
-        </PreferenceCategory>
 
 </PreferenceScreen>

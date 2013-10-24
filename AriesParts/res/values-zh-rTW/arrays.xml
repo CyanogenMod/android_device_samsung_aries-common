@@ -24,10 +24,4 @@
         <item>30秒</item>
         <item>永不</item>
     </string-array>
-
-    <string-array name="hspa_entries">
-        <item>僅 UMTS</item>
-        <item>僅 HSDPA</item>
-        <item>HSDPA＋HSUPA</item>
-    </string-array>
 </resources>

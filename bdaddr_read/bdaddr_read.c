@@ -14,7 +14,7 @@
  */
 
 int main() {
-    char tmpbdaddr[23]; // bt_macaddr:xxxxxxxxxxxx
+    char tmpbdaddr[PROPERTY_VALUE_MAX]; // bt_macaddr:xxxxxxxxxxxx
     char bdaddr[18];
     int fd;
 

@@ -5,5 +5,6 @@ init_daemon_domain(bdaddr_read)
 allow bdaddr_read system_data_file:dir { write add_name };
 allow bdaddr_read system_data_file:file { create open write setattr };
 allow bdaddr_read self:capability { chown fowner };
+allow bdaddr_read bluetooth_prop:property_service set;
 dontaudit bdaddr_read self:capability fsetid;
 unix_socket_connect(bdaddr_read, property, init)

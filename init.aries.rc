@@ -49,6 +49,7 @@ on fs
     mount yaffs2 mtd@datadata /datadata
     mount yaffs2 mtd@cache /cache
     mount_all fstab.aries
+    swapon_all fstab.aries
 
     chown radio radio /radio/modem.bin
     exec /system/bin/restorecon -r /radio

@@ -162,7 +162,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
        ro.vold.switchablepair=/mnt/emmc,/mnt/sdcard \
        ro.bq.gpu_to_cpu_unsupported=1 \
        ro.config.low_ram=true \
-       ro.zram.default=18 \
 
 # SGX540 is slower with the scissor optimization enabled
 PRODUCT_PROPERTY_OVERRIDES += \

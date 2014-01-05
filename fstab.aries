@@ -17,4 +17,4 @@ datadata                    /datadata           yaffs2      defaults            
 /devices/platform/s3c-sdhci.2/mmc_host/mmc2 auto auto defaults voldmanaged=sdcard1:auto
 
 # zRAM
-/dev/block/zram0            none                swap        defaults                                            zramsize=67108864
+/dev/block/zram0            none                swap        defaults                                            zramsize=134217728

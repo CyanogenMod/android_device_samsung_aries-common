@@ -17,11 +17,11 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="mdnie_entries">
         <item>Disabled</item>
-        <item>UI Mode</item>
-        <item>Video Mode</item>
-        <item>Video Warm Mode</item>
-        <item>Video Cold Mode</item>
-        <item>Camera Mode</item>
+        <item>UI</item>
+        <item>Video</item>
+        <item>Video warm</item>
+        <item>Video cold</item>
+        <item>Camera</item>
     </string-array>
 
     <string-array name="mdnie_entries_values" translatable="false">

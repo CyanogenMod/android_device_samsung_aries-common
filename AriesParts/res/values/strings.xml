@@ -18,7 +18,7 @@
     <string name="app_name">Advanced settings</string>
 
     <string name="category_screen_title">Screen</string>
-    <string name="mdnie_title_head">mDNIe Mode</string>
+    <string name="mdnie_title_head">mDNIe mode</string>
     <string name="mdnie_summary_head">Adjust mDNIe display post-processing</string>
 
     <string name="category_tvout_title">TV Out</string>
@@ -26,7 +26,7 @@
     <string name="tvout_enable_summary_nocable">TV Out cable not connected</string>
     <string name="tvout_enable_summary">TV Out cable connected, check to enable</string>
     <string name="tvout_enable_summary_on">TV Out enabled</string>
-    <string name="tvout_system_head">TV System</string>
+    <string name="tvout_system_head">TV system</string>
     <string name="tvout_system_summary">Set your TV system for TV Out</string>
 
     <string name="button_reset_title">Reset</string>

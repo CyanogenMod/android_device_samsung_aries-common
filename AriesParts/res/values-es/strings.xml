@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2013 The CyanogenMod Project
+<!--
+     Copyright (C) 2013-2014 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,7 +14,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <string name="app_name">Ajustes avanzados</string>
     <string name="category_screen_title">Pantalla</string>
     <string name="mdnie_title_head">Modo mDNIe</string>
@@ -21,13 +22,13 @@
     <string name="category_tvout_title">Salida TV</string>
     <string name="tvout_enable_head">Salida TV</string>
     <string name="tvout_enable_summary_nocable">Cable de salida a televisión no conectado</string>
-    <string name="tvout_enable_summary">Cable de salida a televisión conectado, marque la casilla para habilitar la salida a televisión</string>
+    <string name="tvout_enable_summary">Cable de salida a televisión conectado, marca para habilitar la salida a televisión</string>
     <string name="tvout_enable_summary_on">Salida a televisión habilitada</string>
     <string name="tvout_system_head">Sistema TV</string>
     <string name="tvout_system_summary">Establecer el sistema de la salida a televisión</string>
     <string name="button_reset_title">Restablecer</string>
     <string name="generic_warning_title">Aviso</string>
     <string name="imei_not_sane_title">¡Aviso!</string>
-    <string name="imei_not_sane_message">Se ha detectado un problema en su dispositivo. El número IMEI de su dispositivo es inválido. Un número IMEI inválido puede causar problemas de red, incluyendo la imposibilidad de realizar llamadas a números de emergencia.</string>
+    <string name="imei_not_sane_message">Se ha detectado un problema en tu dispositivo. El número IMEI de tu dispositivo es inválido. Un número IMEI inválido puede causar problemas de red, incluyendo la imposibilidad de realizar llamadas a números de emergencia.</string>
     <string name="imei_not_sane_ok">Aceptar</string>
 </resources>

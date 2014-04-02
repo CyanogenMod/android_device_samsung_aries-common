@@ -17,12 +17,12 @@
 -->
 <resources>
   <string-array name="mdnie_entries">
-    <item>Отключено</item>
-    <item>Интерфейс</item>
-    <item>Видео</item>
-    <item>Видео (тёплые тона)</item>
-    <item>Видео (холодн. тона)</item>
-    <item>Камера</item>
+    <item>Deshabilitada</item>
+    <item>IU</item>
+    <item>Videu</item>
+    <item>Videu caldiu</item>
+    <item>Videu fríu</item>
+    <item>Cámara</item>
   </string-array>
   <string-array name="tvout_system_entries">
     <item>NTSC</item>

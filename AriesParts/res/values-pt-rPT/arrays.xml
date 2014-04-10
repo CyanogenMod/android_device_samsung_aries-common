@@ -17,12 +17,12 @@
 -->
 <resources>
   <string-array name="mdnie_entries">
-    <item>Vypnuto</item>
-    <item>Režim UI</item>
-    <item>Režim video</item>
-    <item>Režim teplých barev</item>
-    <item>Režim studených barev</item>
-    <item>Režim videokamera</item>
+    <item>Desativado</item>
+    <item>Interface do Utilizador</item>
+    <item>Vídeo</item>
+    <item>Modo vídeo quente</item>
+    <item>Modo vídeo frio</item>
+    <item>Câmara</item>
   </string-array>
   <string-array name="tvout_system_entries">
     <item>NTSC</item>

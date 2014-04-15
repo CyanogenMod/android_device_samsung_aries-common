@@ -33,7 +33,7 @@
         <item>4</item>
     </string-array>
 
-    <string-array name="tvout_system_entries">
+    <string-array name="tvout_system_entries" translatable="false">
         <item>NTSC</item>
         <item>PAL</item>
     </string-array>

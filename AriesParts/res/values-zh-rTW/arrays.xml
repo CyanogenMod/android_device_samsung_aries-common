@@ -17,11 +17,11 @@
 -->
 <resources>
   <string-array name="mdnie_entries">
-    <item>Uitgeschakeld</item>
-    <item>Gebruikersomgeving</item>
-    <item>Video</item>
-    <item>Video (warm)</item>
-    <item>Video (koud)</item>
-    <item>Camera</item>
+    <item>停用</item>
+    <item>使用者介面</item>
+    <item>影片</item>
+    <item>Video warm</item>
+    <item>Video cold</item>
+    <item>相機</item>
   </string-array>
 </resources>

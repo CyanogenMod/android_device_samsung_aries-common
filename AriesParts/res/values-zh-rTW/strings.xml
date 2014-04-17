@@ -28,7 +28,7 @@
   <string name="tvout_system_head">電視系統</string>
   <string name="tvout_system_summary">設定電視輸出使用的系統</string>
   <string name="button_reset_title">重設</string>
-  <string name="generic_warning_title">警告：</string>
+  <string name="generic_warning_title">警告</string>
   <string name="imei_not_sane_title">警告！</string>
   <string name="imei_not_sane_message">裝置發生問題。您裝置的 IMEI 碼是無效的。無效的 IMEI 碼可能會導致網路問題，包括無法撥打緊急號碼。</string>
   <string name="imei_not_sane_ok">確定</string>

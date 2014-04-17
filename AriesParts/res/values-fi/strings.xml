@@ -27,7 +27,7 @@
   <string name="tvout_enable_summary_on">TV-ulostulo käytössä</string>
   <string name="tvout_system_head">TV-järjestelmä</string>
   <string name="tvout_system_summary">Aseta TV-järjestelmäsi TV-ulostulolle</string>
-  <string name="button_reset_title">Nollaa</string>
+  <string name="button_reset_title">Palauta oletukset</string>
   <string name="generic_warning_title">Varoitus</string>
   <string name="imei_not_sane_title">Varoitus!</string>
   <string name="imei_not_sane_message">Havaittiin ongelma laitteesi kanssa. Laitteesi IMEI-numero ei kelpaa. Virheellinen IMEI-numero voi aiheuttaa verkko-ongelmia, kuten estää soitot hätänumeroihin.</string>

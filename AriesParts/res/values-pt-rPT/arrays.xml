@@ -24,8 +24,4 @@
     <item>Modo vídeo frio</item>
     <item>Câmara</item>
   </string-array>
-  <string-array name="tvout_system_entries">
-    <item>NTSC</item>
-    <item>PAL</item>
-  </string-array>
 </resources>

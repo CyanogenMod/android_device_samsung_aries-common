@@ -23,13 +23,13 @@
   <string name="category_tvout_title">Saída para TV</string>
   <string name="tvout_enable_head">Saída para TV</string>
   <string name="tvout_enable_summary_nocable">Cabo de saída de TV não conectado</string>
-  <string name="tvout_enable_summary">Cabo de saída de TV conectado, selecione  para activar</string>
+  <string name="tvout_enable_summary">Cabo de saída de TV conectado, selecione  para ativar</string>
   <string name="tvout_enable_summary_on">Saída de TV ativada</string>
   <string name="tvout_system_head">Sistema de TV</string>
   <string name="tvout_system_summary">Definir o sistema de TV para saída de TV</string>
-  <string name="button_reset_title">Repor</string>
+  <string name="button_reset_title">Reiniciar</string>
   <string name="generic_warning_title">Aviso</string>
   <string name="imei_not_sane_title">Aviso!</string>
-  <string name="imei_not_sane_message">Foi detectado um problema com o seu aparelho. O IMEI do aparelho é inválido. Um IMEI inválido pode causar problemas de rede, incluindo a incapacidade de ligar para números de emergência.</string>
+  <string name="imei_not_sane_message">Foi detetado um problema com o seu dispositivo. O IMEI do dispositivo é inválido. Um IMEI inválido pode causar problemas de rede, incluindo a incapacidade de ligar para números de emergência.</string>
   <string name="imei_not_sane_ok">OK</string>
 </resources>

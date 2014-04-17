@@ -31,5 +31,4 @@
   <string name="generic_warning_title">Avisu</string>
   <string name="imei_not_sane_title">¡Avisu!</string>
   <string name="imei_not_sane_message">Deteutóse un problema col to preséu. El númberu IMEI del to preséu nun ye válidu. Un númberu IMEI non válidu podría causar problemes de rede incluyendo la incapacidá pa llamar a númberos d\'emerxencia.</string>
-  <string name="imei_not_sane_ok">Aceutar</string>
 </resources>

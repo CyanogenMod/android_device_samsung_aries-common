@@ -28,7 +28,7 @@
   <string name="tvout_system_head">Sistema de TV</string>
   <string name="tvout_system_summary">Estableix el teu sistema de TV per la sortida de TV</string>
   <string name="button_reset_title">Reinicia</string>
-  <string name="generic_warning_title">Alerta</string>
+  <string name="generic_warning_title">Avís</string>
   <string name="imei_not_sane_title">Avís!</string>
   <string name="imei_not_sane_message">S\'ha detectat un problema amb el teu dispositiu. El número d\'IMEI del teu dispositiu és invàlid. Un nombre d\'IMEI invàlid podria causar problemes de xarxa incloent-hi la incapacitat per trucar a números d\'emergència.</string>
   <string name="imei_not_sane_ok">D\'acord</string>

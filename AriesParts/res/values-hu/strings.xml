@@ -21,14 +21,11 @@
   <string name="mdnie_title_head">mDNIe mód</string>
   <string name="mdnie_summary_head">Állítsa be a kijelző mDNIe utófeldolgozását</string>
   <string name="category_tvout_title">TV kimenet</string>
-  <string name="tvout_enable_head">TV kimenet</string>
   <string name="tvout_enable_summary_nocable">TV kábel nincs csatlakoztatva</string>
   <string name="tvout_enable_summary">TV-kábel csatlakoztatva, de nincs engedélyezve</string>
   <string name="tvout_enable_summary_on">TV kimenet engedélyezve</string>
   <string name="tvout_system_head">TV-rendszer</string>
   <string name="tvout_system_summary">Állítsa be a TV rendszerét TV kimenetre</string>
-  <string name="button_reset_title">Visszaállítás</string>
-  <string name="generic_warning_title">Figyelmeztetés</string>
   <string name="imei_not_sane_title">Figyelmeztetés!</string>
   <string name="imei_not_sane_message">Problémát észleltünk a készülékkel kapcsolatban. A készülék IMEI száma érvénytelen. Érvénytelen IMEI szám hálózati hibát okozhat, beleértve hogy segélyhívó számokat sem fog tudni felhívni.</string>
   <string name="imei_not_sane_ok">OK</string>

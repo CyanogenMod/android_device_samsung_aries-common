@@ -22,8 +22,8 @@
   <string name="mdnie_summary_head">mDNIe ekran sonradan işlemeyi ayarla</string>
   <string name="category_tvout_title">TV Çıkışı</string>
   <string name="tvout_enable_head">TV Çıkışı</string>
-  <string name="tvout_enable_summary_nocable">TV çıkışı kablosu bağlanmadı</string>
-  <string name="tvout_enable_summary">TV çıkışı kablosu bağlantı, aktifleştirmek için işaretleyin</string>
+  <string name="tvout_enable_summary_nocable">TV çıkışı kablosu bağlı değil</string>
+  <string name="tvout_enable_summary">TV Çıkışı kablosu bağlandı, aktifleştirmek için işaretleyin</string>
   <string name="tvout_enable_summary_on">TV Çıkışı etkinleştirildi</string>
   <string name="tvout_system_head">TV Sistemi</string>
   <string name="tvout_system_summary">TV sisteminizi TV Çıkışı için ayarlayın</string>

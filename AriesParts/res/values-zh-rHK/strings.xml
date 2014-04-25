@@ -16,12 +16,6 @@
      limitations under the License.
 -->
 <resources>
-  <string-array name="mdnie_entries">
-    <item>Devre Dışı</item>
-    <item>Kullanıcı Arayüzü Modu</item>
-    <item>Video Modu</item>
-    <item>Video sıcak</item>
-    <item>Video Soğuk Modu</item>
-    <item>Kamera Modu</item>
-  </string-array>
+  <string name="app_name">進階設定</string>
+  <string name="category_screen_title">螢幕</string>
 </resources>

@@ -17,11 +17,11 @@
 -->
 <resources>
   <string-array name="mdnie_entries">
-    <item>Devre Dışı</item>
-    <item>Kullanıcı Arayüzü Modu</item>
-    <item>Video Modu</item>
-    <item>Video sıcak</item>
-    <item>Video Soğuk Modu</item>
-    <item>Kamera Modu</item>
+    <item>Disabled</item>
+    <item>UI</item>
+    <item>Video</item>
+    <item>Video warm</item>
+    <item>Video cold</item>
+    <item>相機</item>
   </string-array>
 </resources>

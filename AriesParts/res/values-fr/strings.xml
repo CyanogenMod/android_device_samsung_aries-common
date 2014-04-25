@@ -31,4 +31,5 @@
   <string name="generic_warning_title">Attention</string>
   <string name="imei_not_sane_title">Attention\u00A0!</string>
   <string name="imei_not_sane_message">Un problème a été détecté avec votre appareil. Votre numéro IMEI est invalide. Un numéro IMEI invalide peut poser des problèmes de connexion au réseau mobile y compris l\'impossibilité de passer des appels d\'urgence.</string>
+  <string name="imei_not_sane_ok">OK</string>
 </resources>

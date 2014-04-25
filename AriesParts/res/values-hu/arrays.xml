@@ -17,11 +17,11 @@
 -->
 <resources>
   <string-array name="mdnie_entries">
-    <item>Disabled</item>
+    <item>Letiltva</item>
     <item>Felhasználói felület</item>
     <item>Videó</item>
     <item>Videó (Meleg árnyalat)</item>
     <item>Videó (Hideg árnyalat)</item>
-    <item>Camera</item>
+    <item>Kamera</item>
   </string-array>
 </resources>

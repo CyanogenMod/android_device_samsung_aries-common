@@ -19,7 +19,7 @@
   <string name="app_name">Напредна подешавања</string>
   <string name="category_screen_title">Екран</string>
   <string name="mdnie_title_head">mDNIe режим</string>
-  <string name="mdnie_summary_head">Прилагодите mDNIe дисплеј после-обраду</string>
+  <string name="mdnie_summary_head">Прилагодите mDNIe после-обраду дисплеја</string>
   <string name="category_tvout_title">TV излаз</string>
   <string name="tvout_enable_head">TV излаз</string>
   <string name="tvout_enable_summary_nocable">Кабал за TV излаз није повезан</string>
@@ -28,8 +28,8 @@
   <string name="tvout_system_head">TV систем</string>
   <string name="tvout_system_summary">Подесите Ваш TV систем за TV излаз</string>
   <string name="button_reset_title">Ресетовање</string>
-  <string name="generic_warning_title">Пажња</string>
-  <string name="imei_not_sane_title">Пажња!</string>
-  <string name="imei_not_sane_message">Проблем је детектован са уређајем. Ваш IMEI број уређаја је неважећи.Неважећи IMEI број може изазвати мрежне проблеме, укључујући немогућност да позовете бројеве за хитне случајеве.</string>
+  <string name="generic_warning_title">Упозорење</string>
+  <string name="imei_not_sane_title">Упозорење!</string>
+  <string name="imei_not_sane_message">Проблем је детектован са уређајем.Ваш IMEI број уређаја је неважећи.Неважећи IMEI број може изазвати мрежне проблеме, укључујући немогућност да позовете бројеве за хитне случајеве.</string>
   <string name="imei_not_sane_ok">OK</string>
 </resources>

@@ -15,7 +15,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Ρυθμίσεις για προχωρημένους</string>
   <string name="category_screen_title">Οθόνη</string>
   <string name="mdnie_title_head">Λειτουργία mDNIe</string>

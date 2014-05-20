@@ -15,13 +15,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string-array name="mdnie_entries">
-    <item>Disabled</item>
+    <item>已停用</item>
     <item>UI</item>
-    <item>Video</item>
-    <item>Video warm</item>
-    <item>Video cold</item>
+    <item>影片</item>
+    <item>影片 (暖色)</item>
+    <item>影片 (冷色)</item>
     <item>相機</item>
   </string-array>
 </resources>

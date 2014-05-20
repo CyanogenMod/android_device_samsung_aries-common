@@ -15,7 +15,21 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">進階設定</string>
   <string name="category_screen_title">螢幕</string>
+  <string name="mdnie_title_head">mDNIe 模式</string>
+  <string name="mdnie_summary_head">調整 mDNIe 顯示後期處理</string>
+  <string name="category_tvout_title">電視輸出</string>
+  <string name="tvout_enable_head">電視輸出</string>
+  <string name="tvout_enable_summary_nocable">電視輸出線未連接</string>
+  <string name="tvout_enable_summary">電視輸出線已連接，點選以啟用</string>
+  <string name="tvout_enable_summary_on">電視輸出已啟用</string>
+  <string name="tvout_system_head">電視系統</string>
+  <string name="tvout_system_summary">設定電視輸出使用的系統</string>
+  <string name="button_reset_title">重設</string>
+  <string name="generic_warning_title">警告</string>
+  <string name="imei_not_sane_title">警告！</string>
+  <string name="imei_not_sane_message">偵測到您的設備出現問題。您的裝置 IMEI 號碼無效。無效的 IMEI 號碼可能會導致網絡問題，包括無法撥打緊急電話號碼。</string>
+  <string name="imei_not_sane_ok">確定</string>
 </resources>

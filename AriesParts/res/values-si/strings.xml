@@ -27,7 +27,7 @@
   <string name="tvout_enable_summary_on">ටීවී බැහැර සබලයි</string>
   <string name="tvout_system_head">ටීවී පද්ධතිය</string>
   <string name="tvout_system_summary">ටීවී බැහැර සඳහා ඔබගේ ටීවී පද්ධතිය සකසන්න</string>
-  <string name="button_reset_title">ප්‍රත්‍යාරම්භනය</string>
+  <string name="button_reset_title">යලි පිහිටුවන්න</string>
   <string name="generic_warning_title">අවවාදයයි</string>
   <string name="imei_not_sane_title">අවවාදයයි!</string>
   <string name="imei_not_sane_message">ඔබගේ උපාංගයේ දෝෂයක් අනාවරණය විය. ඔබගේ උපාංගයේ IMEI අංකය වලංගු නැත. වලංගු නොවන IMEI අංකයක් මගින් හදිසි අංක ඇමතීමට නොහැකි වීම ඇතුළු ජාලමය ගැටළු ඇතිවිය හැක.</string>

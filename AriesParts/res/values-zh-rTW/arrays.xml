@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string-array name="mdnie_entries">
-    <item>停用</item>
+    <item>已停用</item>
     <item>UI</item>
     <item>影片</item>
     <item>影片 (暖色)</item>

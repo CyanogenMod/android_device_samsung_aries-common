@@ -24,7 +24,7 @@
   <string name="tvout_enable_head">電視輸出</string>
   <string name="tvout_enable_summary_nocable">未連接電視輸出線</string>
   <string name="tvout_enable_summary">已連接電視輸出線，點選以啟用</string>
-  <string name="tvout_enable_summary_on">已啟用電視輸出</string>
+  <string name="tvout_enable_summary_on">電視輸出已啟用</string>
   <string name="tvout_system_head">電視系統</string>
   <string name="tvout_system_summary">設定電視輸出使用的系統</string>
   <string name="button_reset_title">重設</string>

@@ -22,14 +22,14 @@
   <string name="mdnie_summary_head">mDNIe 디스플레이 포스트 프로세싱 조정</string>
   <string name="category_tvout_title">TV 출력</string>
   <string name="tvout_enable_head">TV 출력</string>
-  <string name="tvout_enable_summary_nocable">TV 출력 케이블이 연결 되지 않았습니다</string>
-  <string name="tvout_enable_summary">TV 출력 케이블 연결, 사용 가능한지 확인</string>
-  <string name="tvout_enable_summary_on">TV 출력 사용</string>
+  <string name="tvout_enable_summary_nocable">TV 출력 케이블이 연결되지 않았습니다</string>
+  <string name="tvout_enable_summary">TV 출력 케이블이 연결되었습니다. 체크하여 활성화해주십시오.</string>
+  <string name="tvout_enable_summary_on">TV 출력이 활성화되었습니다</string>
   <string name="tvout_system_head">TV 시스템</string>
   <string name="tvout_system_summary">TV 출력을 위한 TV 시스템 설정</string>
-  <string name="button_reset_title">리셋</string>
-  <string name="generic_warning_title">경고!</string>
+  <string name="button_reset_title">초기화</string>
+  <string name="generic_warning_title">경고</string>
   <string name="imei_not_sane_title">경고!</string>
-  <string name="imei_not_sane_message">장치에서 문제가 발견되었습니다. 장치의 IMEI 넘버가 올바르지 않습니다. 올바르지 않은 IMEI 넘버는 긴급전화 사용 불능 등의 네트워크 문제를 일으킬 수 있습니다.</string>
+  <string name="imei_not_sane_message">장치에서 문제가 발견되었습니다. 장치의 IMEI 번호가 올바르지 않습니다. IMEI 번호가 올바르지 않으면 긴급 통화를 사용하지 못하는 등 네트워크 문제가 발생할 수 있습니다.</string>
   <string name="imei_not_sane_ok">확인</string>
 </resources>

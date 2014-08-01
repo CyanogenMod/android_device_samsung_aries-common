@@ -22,7 +22,7 @@
   <string name="mdnie_summary_head">Állítsa be a kijelző mDNIe utófeldolgozását</string>
   <string name="category_tvout_title">TV kimenet</string>
   <string name="tvout_enable_head">TV kimenet</string>
-  <string name="tvout_enable_summary_nocable">TV kábel nincs csatlakoztatva</string>
+  <string name="tvout_enable_summary_nocable">TV-kábel nincs csatlakoztatva</string>
   <string name="tvout_enable_summary">TV-kábel csatlakoztatva, de nincs engedélyezve</string>
   <string name="tvout_enable_summary_on">TV kimenet engedélyezve</string>
   <string name="tvout_system_head">TV-rendszer</string>

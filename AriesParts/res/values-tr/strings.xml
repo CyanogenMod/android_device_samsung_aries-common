@@ -19,7 +19,7 @@
   <string name="app_name">Gelişmiş ayarlar</string>
   <string name="category_screen_title">Ekran</string>
   <string name="mdnie_title_head">mDNIe Modu</string>
-  <string name="mdnie_summary_head">mDNIe ekran sonradan işlemeyi ayarla</string>
+  <string name="mdnie_summary_head">mDNIe ekranını sonradan işlemeyi ayarla</string>
   <string name="category_tvout_title">TV Çıkışı</string>
   <string name="tvout_enable_head">TV Çıkışı</string>
   <string name="tvout_enable_summary_nocable">TV çıkışı kablosu bağlı değil</string>
@@ -30,6 +30,6 @@
   <string name="button_reset_title">Sıfırla</string>
   <string name="generic_warning_title">Uyarı</string>
   <string name="imei_not_sane_title">Uyarı!</string>
-  <string name="imei_not_sane_message">Cihazınızla ilgili bir problem tespit edildi. IMEI numaranız geçersiz. Geçersiz bir IMEI numarası acil numaraların aranması dahil ağ sorunlarına yol açabilir.</string>
+  <string name="imei_not_sane_message">Cihazınız ile ilgili bir sorun tespit edildi. Cihazınızın IMEI numarası geçersiz. Geçersiz bir IMEI numarası acil numaraların aranması da dâhil olmak üzere ağ sorunlarına yol açabilir.</string>
   <string name="imei_not_sane_ok">Tamam</string>
 </resources>

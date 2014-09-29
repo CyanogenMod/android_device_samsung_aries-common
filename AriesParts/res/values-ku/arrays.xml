@@ -17,11 +17,11 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string-array name="mdnie_entries">
-    <item>له‌کارخرا</item>
+    <item>ناچالاککراو</item>
     <item>ێو ئای</item>
-    <item>ڤیدۆ</item>
-    <item>ڤیدۆی گه‌رم</item>
-    <item>ڤیدۆی سارد</item>
+    <item>ڤیدیۆ</item>
+    <item>ڤیدیۆی گەرم</item>
+    <item>ڤیدیۆی سارد</item>
     <item>کامێرا</item>
   </string-array>
 </resources>

@@ -20,8 +20,8 @@
     <item>無効</item>
     <item>UI</item>
     <item>ビデオ</item>
-    <item>ビデオ暖色</item>
-    <item>ビデオ寒色</item>
+    <item>ビデオ（暖色）</item>
+    <item>ビデオ（寒色）</item>
     <item>カメラ</item>
   </string-array>
 </resources>

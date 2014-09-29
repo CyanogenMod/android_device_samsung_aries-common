@@ -17,19 +17,19 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">ڕێکخستنی پێشکه‌وتوو</string>
-  <string name="category_screen_title">ڕوونما</string>
-  <string name="mdnie_title_head">mDNIe باری</string>
-  <string name="mdnie_summary_head">ڕێکخستنی mDNIe پیشاندانی پۆست -پرۆسه‌ی</string>
+  <string name="category_screen_title">شاشە</string>
+  <string name="mdnie_title_head">mDNIe دۆخی</string>
+  <string name="mdnie_summary_head"> ڕێکخستنی دۆخی mDNIe نیشاندان بەردەوامە</string>
   <string name="category_tvout_title">TV ده‌ره‌وه‌</string>
   <string name="tvout_enable_head">TV ده‌ره‌وه‌</string>
-  <string name="tvout_enable_summary_nocable">کێبڵی ته‌له‌ڤیزیۆن په‌یوه‌ند نه‌کراوه‌</string>
-  <string name="tvout_enable_summary">کێبڵه‌که‌ په‌یوه‌ستکراوه‌، پشکنین بکه‌ بۆ چالاکردنی</string>
-  <string name="tvout_enable_summary_on">ته‌له‌فزیۆن ده‌ره‌وه‌ چالاکراوه‌</string>
+  <string name="tvout_enable_summary_nocable">کەیبڵی تەلەفیزیۆن بۆ دەرەوە پەیوەستنەکراوە</string>
+  <string name="tvout_enable_summary">کەیبڵی تەلەفیزیۆن بۆ دەرەوە په‌یوه‌ستکراوه‌، پشکنین بکه‌ بۆ چالاکردن</string>
+  <string name="tvout_enable_summary_on">ته‌له‌فزیۆن بۆ ده‌ره‌وه‌ چالاککراوه‌</string>
   <string name="tvout_system_head">سیسته‌می ته‌له‌فزیۆن</string>
   <string name="tvout_system_summary">دانانی سیسته‌می ته‌له‌فزیۆن بۆ ته‌له‌فزیۆنی ده‌روه‌</string>
   <string name="button_reset_title">ڕێکخستنه‌وه‌</string>
   <string name="generic_warning_title">ئاگادارکردنه‌وه‌</string>
   <string name="imei_not_sane_title">ئاگادارکردنه‌وه‌ !</string>
-  <string name="imei_not_sane_message">کێشه‌یه‌ک دروست بوه‌ له‌ ئامێره‌که‌ت، Imei ئامێره‌که‌ت له‌ کارنیه‌، دیارنه‌مانی imei  ناتوانی ته‌له‌فۆن بکه‌یت یان ته‌له‌فۆن بۆ ئیمرجنسی بکه‌یت</string>
+  <string name="imei_not_sane_message">کێشه‌یه‌ک دروست بووه‌ له‌ ئامێره‌که‌ت، Imei ئامێره‌که‌ت نا دروستە، نا دروستی imei  دەبێتە هۆی ئەوەی نەتوانی ته‌له‌فۆن بکه‌یت یان ته‌له‌فۆن بۆ ئیمیرجنسی بکه‌یت</string>
   <string name="imei_not_sane_ok">باشه‌</string>
 </resources>

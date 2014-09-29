@@ -26,10 +26,10 @@
   <string name="tvout_enable_summary">テレビ出力ケーブルが接続されました、有効にするための確認をします</string>
   <string name="tvout_enable_summary_on">テレビ出力は有効です</string>
   <string name="tvout_system_head">テレビシステム</string>
-  <string name="tvout_system_summary">テレビ出力をするためにテレビシステムを設定する</string>
+  <string name="tvout_system_summary">テレビ出力のためにテレビシステムを設定する</string>
   <string name="button_reset_title">リセット</string>
   <string name="generic_warning_title">警告</string>
-  <string name="imei_not_sane_title">警告 ！</string>
+  <string name="imei_not_sane_title">警告</string>
   <string name="imei_not_sane_message">端末に問題が検出されました。IMEIが無効です。無効なIMEIは緊急電話番号に発信できないなどのネットワークの問題を引き起こす可能性があります。</string>
   <string name="imei_not_sane_ok">OK</string>
 </resources>

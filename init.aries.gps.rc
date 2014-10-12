@@ -13,6 +13,5 @@ service gpsd /system/vendor/bin/gpsd -c /vendor/etc/gps.xml
 on post-fs-data
     # create data/gps for GPS demon
     mkdir /data/gps 700 gps system
-    chown gps system /data/gps
     chown gps root /sys/class/sec/gps/GPS_PWR_EN/value
     chmod 660 /sys/class/sec/gps/GPS_PWR_EN/value

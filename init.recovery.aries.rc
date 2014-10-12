@@ -1,5 +1,3 @@
-import usb.rc # Renamed init.aries.usb.rc, we can't use init*.rc because the build script will delete it
-
 on init
     # legacy symlink
     rmdir /external_sd
@@ -12,6 +10,3 @@ on fs
 
 on boot
     write /dev/graphics/fb3 1
-
-    # mass_storage support
-    setprop sys.usb.config mass_storage,adb

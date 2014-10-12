@@ -40,11 +40,6 @@
 # application settings that are stored in resourced.
 DEVICE_PACKAGE_OVERLAYS := device/samsung/aries-common/overlay
 
-# These are the hardware-specific configuration files
-PRODUCT_COPY_FILES := \
-	device/samsung/aries-common/egl.cfg:system/lib/egl/egl.cfg \
-	device/samsung/aries-common/mxt224_ts_input.idc:system/usr/idc/mxt224_ts_input.idc
-
 # Init files
 PRODUCT_COPY_FILES += \
 	device/samsung/aries-common/init.aries.rc:root/init.aries.rc \
@@ -56,16 +51,18 @@ PRODUCT_COPY_FILES += \
 	device/samsung/aries-common/ueventd.aries.rc:root/ueventd.aries.rc \
 	device/samsung/aries-common/setupdatadata.sh:root/sbin/setupdatadata.sh
 
-# Prebuilt kl keymaps
+# Prebuilt kl and kcm keymaps
 PRODUCT_COPY_FILES += \
 	device/samsung/aries-common/cypress-touchkey.kl:system/usr/keylayout/cypress-touchkey.kl \
+	device/samsung/aries-common/cypress-touchkey.kcm:system/usr/keychars/cypress-touchkey.kcm \
 	device/samsung/aries-common/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
-	device/samsung/aries-common/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl
+	device/samsung/aries-common/sec_jack.kcm:system/usr/keychars/sec_jack.kcm \
+	device/samsung/aries-common/s3c-keypad.kl:system/usr/keylayout/s3c-keypad.kl \
+	device/samsung/aries-common/s3c-keypad.kcm:system/usr/keychars/s3c-keypad.kcm
 
-# Generated kcm keymaps
-PRODUCT_PACKAGES := \
-       cypress-touchkey.kcm \
-       s3c-keypad.kcm
+# Input device calibration files
+PRODUCT_COPY_FILES += \
+	device/samsung/aries-common/mxt224_ts_input.idc:system/usr/idc/mxt224_ts_input.idc
 
 # Filesystem management tools
 PRODUCT_PACKAGES += \
@@ -136,8 +133,7 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
 	frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml \
 	frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml \
-	frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
-	packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
+	frameworks/native/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml
 
 # The OpenGL ES API level that is natively supported by this device.
 # This is a 16.16 fixed point number
@@ -158,7 +154,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
        ro.telephony.ril_class=SamsungExynos3RIL \
        ro.telephony.ril.v3=icccardstatus,datacall,signalstrength,facilitylock \
        mobiledata.interfaces=pdp0,eth0,gprs,ppp0 \
-       ro.vold.switchablepair=/mnt/emmc,/mnt/sdcard \
        ro.bq.gpu_to_cpu_unsupported=1 \
        ro.config.low_ram=true \
        ro.ksm.default=1 \
@@ -190,10 +185,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-data-only=1
 
-# Set default USB interface and default to internal SD as /sdcard
+# Set default USB interface
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mass_storage \
-    persist.sys.vold.switchexternal=1
+    persist.sys.usb.config=mass_storage
 
 include frameworks/native/build/phone-hdpi-512-dalvik-heap.mk
 

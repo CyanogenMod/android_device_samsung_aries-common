@@ -11,6 +11,7 @@ import android.preference.ListPreference;
 import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
+import android.view.MenuItem;
 
 public class DisplaySettings extends PreferenceActivity  {
 
@@ -92,6 +93,8 @@ public class DisplaySettings extends PreferenceActivity  {
             category.removePreference(mTvOutSystem);
             getPreferenceScreen().removePreference(category);
         }
+
+        getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -120,6 +123,15 @@ public class DisplaySettings extends PreferenceActivity  {
     protected void onDestroy() {
         mTvOut.finalize();
         super.onDestroy();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }

@@ -15,9 +15,9 @@ on init
     mkdir /storage/sdcard1 0700 root root
     symlink /storage/sdcard0 /sdcard
     symlink /storage/sdcard0 /mnt/sdcard
-    symlink /storage/sdcard1 /emmc
-    symlink /storage/sdcard1 /mnt/emmc
-    # FIXME: Remove emmc?
+    symlink /storage/sdcard1 /external_sd
+    symlink /storage/sdcard1 /mnt/external_sd
+
     mkdir /datadata 0771 system system
 
     # We will create our own ril-daemon service in class 'core' because the

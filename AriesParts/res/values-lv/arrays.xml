@@ -17,11 +17,11 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string-array name="mdnie_entries">
-    <item>Desaktivéiert</item>
+    <item>Izslēgts</item>
     <item>UI</item>
     <item>Video</item>
-    <item>Video (waarm)</item>
-    <item>Video (kal)</item>
-    <item>Fotoapparat</item>
+    <item>Silts video</item>
+    <item>Auksts video</item>
+    <item>Kamera</item>
   </string-array>
 </resources>

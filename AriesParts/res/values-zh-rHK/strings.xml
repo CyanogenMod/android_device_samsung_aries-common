@@ -22,7 +22,7 @@
   <string name="mdnie_summary_head">調整 mDNIe 顯示後期處理</string>
   <string name="category_tvout_title">電視輸出</string>
   <string name="tvout_enable_head">電視輸出</string>
-  <string name="tvout_enable_summary_nocable">電視輸出線未連接</string>
+  <string name="tvout_enable_summary_nocable">電視輸出綫未連接</string>
   <string name="tvout_enable_summary">電視輸出線已連接，點選以啟用</string>
   <string name="tvout_enable_summary_on">電視輸出已啟用</string>
   <string name="tvout_system_head">電視系統</string>

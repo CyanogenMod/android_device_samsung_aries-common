@@ -73,6 +73,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	com.android.future.usb.accessory
 
+PRODUCT_CHARACTERISTICS := nosdcard
+
 # These are the OpenMAX IL configuration files
 PRODUCT_COPY_FILES += \
 	hardware/samsung/exynos3/s5pc110/sec_mm/sec_omx/sec_omx_core/secomxregistry:system/etc/secomxregistry \

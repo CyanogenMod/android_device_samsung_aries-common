@@ -47,22 +47,22 @@ on fs
     restorecon /dev/mapper/lvpool-userdata
 
     mkdir /radio 0775 radio radio
-    mount yaffs2 mtd@radio /radio
-    mount yaffs2 mtd@datadata /datadata
-    mount yaffs2 mtd@cache /cache
+    mount yaffs2 mtd@radio /radio noatime nosuid nodev
+    mount yaffs2 mtd@datadata /datadata noatime nosuid nodev
+    mount yaffs2 mtd@cache /cache noatime nosuid nodev
     mount_all fstab.aries
     swapon_all fstab.aries
 
     chown radio radio /radio/modem.bin
-    exec /system/bin/restorecon -r /radio
+    restorecon_recursive /radio
 
 # We chown/chmod /efs because mount is run as root + defaults
     mkdir /efs 0775 radio radio
-    mount yaffs2 /dev/block/mtdblock4 /efs
+    mount yaffs2 mtd@efs /efs noatime nosuid nodev
     chown radio radio /efs
     chmod 770 /efs
     chmod 770 /efs/imei
-    exec /system/bin/restorecon -r /efs
+    restorecon_recursive /efs
 
 # permissions for bluetooth.
     chown bluetooth net_bt_stack /dev/s3c2410_serial0

@@ -16,7 +16,7 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Setări Avansate</string>
+  <string name="app_name">Setări avansate</string>
   <string name="category_screen_title">Ecran</string>
   <string name="mdnie_title_head">Mod mDNIe</string>
   <string name="mdnie_summary_head">Reglaj post-procesare mDNIe</string>

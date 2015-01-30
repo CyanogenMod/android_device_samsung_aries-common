@@ -30,6 +30,6 @@
   <string name="button_reset_title">Atkurti</string>
   <string name="generic_warning_title">Įspėjimas</string>
   <string name="imei_not_sane_title">Įspėjimas!</string>
-  <string name="imei_not_sane_message">Nustatyta problema su jūsų prietaisu. Jūsų prietaiso IMEI numeris yra negaliojantis. Negaliojantis IMEI numeris gali sukelti tinklo problemas, įskaitant nusegebėjimą skambinti pagalbos numeriais.</string>
+  <string name="imei_not_sane_message">Nustatyta problema su jūsų įrenginiu. Jūsų prietaiso IMEI numeris yra negaliojantis. Negaliojantis IMEI numeris gali sukelti tinklo problemas, įskaitant nusegebėjimą skambinti pagalbos numeriais.</string>
   <string name="imei_not_sane_ok">Gerai</string>
 </resources>

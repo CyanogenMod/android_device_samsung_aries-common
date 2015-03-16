@@ -19,17 +19,17 @@
   <string name="app_name">Paramètres avancés</string>
   <string name="category_screen_title">Écran</string>
   <string name="mdnie_title_head">Mode mDNIe</string>
-  <string name="mdnie_summary_head">Régler le pré-traitement de l\'affichage mDNIe</string>
+  <string name="mdnie_summary_head">Ajuster le post-traitement de l\'affichage mDNIe</string>
   <string name="category_tvout_title">Sortie TV</string>
   <string name="tvout_enable_head">Sortie TV</string>
   <string name="tvout_enable_summary_nocable">Câble de sortie TV non connecté</string>
-  <string name="tvout_enable_summary">Câble de sortie TV connecté, vérification de l\'activation</string>
+  <string name="tvout_enable_summary">Câble de sortie TV connecté, cocher pour activer</string>
   <string name="tvout_enable_summary_on">Sortie TV activée</string>
   <string name="tvout_system_head">Système TV</string>
-  <string name="tvout_system_summary">Définir le système de sortie TV</string>
+  <string name="tvout_system_summary">Définir votre système TV vers sortie TV</string>
   <string name="button_reset_title">Réinitialiser</string>
   <string name="generic_warning_title">Attention</string>
-  <string name="imei_not_sane_title">Attention\u00A0!</string>
-  <string name="imei_not_sane_message">Un problème a été détecté avec votre appareil. Votre numéro IMEI est incorrect. Un numéro IMEI incorrect peut poser des problèmes de connexion au réseau mobile y compris l\'impossibilité de passer des appels d\'urgence.</string>
+  <string name="imei_not_sane_title">Attention!</string>
+  <string name="imei_not_sane_message">Un problème a été détecté avec votre appareil. Votre numéro IMEI est invalide. Un numéro IMEI invalide peut poser des problèmes de connexion au réseau mobile, y compris l\'impossibilité de faire des appels d\'urgence.</string>
   <string name="imei_not_sane_ok">OK</string>
 </resources>

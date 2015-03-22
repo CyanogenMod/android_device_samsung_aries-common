@@ -16,20 +16,20 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">Xüsusi tənzimləmələr</string>
+  <string name="app_name">Qabaqcıl tənzimləmələr</string>
   <string name="category_screen_title">Ekran</string>
-  <string name="mdnie_title_head">mDNIe modu</string>
+  <string name="mdnie_title_head">mDNIe rejimi</string>
   <string name="mdnie_summary_head">mDNIe ekranını sonradan işləməyə tənzimlə</string>
   <string name="category_tvout_title">TV Çıxışı</string>
   <string name="tvout_enable_head">TV Çıxışı</string>
   <string name="tvout_enable_summary_nocable">TV Çıxış kabeli birlәşdirilmәyib</string>
-  <string name="tvout_enable_summary">TV Çıxış kabeli qoşulub, altivlәşdirmәk üçün işarələyin</string>
-  <string name="tvout_enable_summary_on">TV Çıxışı aktivdir</string>
-  <string name="tvout_system_head">TV sistem</string>
+  <string name="tvout_enable_summary">TV Çıxış kabeli qoşulub, fəallaşdırmaq üçün basın</string>
+  <string name="tvout_enable_summary_on">TV Çıxışı fəallaşdırıldı</string>
+  <string name="tvout_system_head">TV sistemi</string>
   <string name="tvout_system_summary">TV sistemini TV Çıxışı üçün tənzimləyin</string>
   <string name="button_reset_title">Sıfırla</string>
   <string name="generic_warning_title">Xәbәrdarlıq</string>
   <string name="imei_not_sane_title">Xәbәrdarlıq!</string>
   <string name="imei_not_sane_message">Cihazınızla bağlı problem aşkarlandı. Cihazınızın IMEI nömrəsi etibarsızdır. Etibarsız IMEI nömrəsi təcili nömrələrə zəng etməklə bərabər şəbəkə problemlərinə də yol aça bilər.</string>
-  <string name="imei_not_sane_ok">OK</string>
+  <string name="imei_not_sane_ok">Oldu</string>
 </resources>

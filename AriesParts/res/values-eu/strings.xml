@@ -19,7 +19,7 @@
   <string name="app_name">Ezarpen aurreratuak</string>
   <string name="category_screen_title">Pantaila</string>
   <string name="mdnie_title_head">mDNIe modua</string>
-  <string name="mdnie_summary_head">mDNIe-rentzako pantailaren post-prozesatua doitu</string>
+  <string name="mdnie_summary_head">Doitu pantailaren mDNIe post-prozesatua</string>
   <string name="category_tvout_title">TV irteera</string>
   <string name="tvout_enable_head">TV irteera</string>
   <string name="tvout_enable_summary_nocable">TV irteerarako kablea ez dago konektaturik</string>

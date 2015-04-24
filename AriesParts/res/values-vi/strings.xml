@@ -17,4 +17,19 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">Cài đặt nâng cao</string>
+  <string name="category_screen_title">Màn hình</string>
+  <string name="mdnie_title_head">Chế độ mDNIe</string>
+  <string name="mdnie_summary_head">Điều chỉnh hiển thị mDNIe sau khi xử lý</string>
+  <string name="category_tvout_title">TV Out</string>
+  <string name="tvout_enable_head">TV Out</string>
+  <string name="tvout_enable_summary_nocable">Cáp TV Out chưa được kết nối</string>
+  <string name="tvout_enable_summary">Cáp TV Out đã kết nối, chọn để bật</string>
+  <string name="tvout_enable_summary_on">TV Out đã bật</string>
+  <string name="tvout_system_head">Hệ thống TV</string>
+  <string name="tvout_system_summary">Đặt hệ thống TV của bạn cho TV Out</string>
+  <string name="button_reset_title">Đặt lại</string>
+  <string name="generic_warning_title">Cảnh báo</string>
+  <string name="imei_not_sane_title">Cảnh báo!</string>
+  <string name="imei_not_sane_message">Thiết bị của bạn đã được phát hiện có một vấn đề. Số IMEI thiết bị của bạn không hợp lệ. Số IMEI không hợp lệ có thể gây vấn đề về mạng bao gồm mất khả năng gọi các số máy khẩn cấp.</string>
+  <string name="imei_not_sane_ok">OK</string>
 </resources>

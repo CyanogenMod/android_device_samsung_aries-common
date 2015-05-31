@@ -17,7 +17,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="app_name">ڕێکخستنی پێشکه‌وتوو</string>
-  <string name="category_screen_title">شاشە</string>
+  <string name="category_screen_title">ڕونما</string>
   <string name="mdnie_title_head">mDNIe دۆخی</string>
   <string name="mdnie_summary_head"> ڕێکخستنی دۆخی mDNIe نیشاندان بەردەوامە</string>
   <string name="category_tvout_title">TV ده‌ره‌وه‌</string>

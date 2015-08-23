@@ -19,17 +19,17 @@
   <string name="app_name">Napredne postavke</string>
   <string name="category_screen_title">Zaslon</string>
   <string name="mdnie_title_head">mDNIe način</string>
-  <string name="mdnie_summary_head">Podesi post-radnje mDNIe zaslona</string>
-  <string name="category_tvout_title">TV Izlaz</string>
-  <string name="tvout_enable_head">TV Izlaz</string>
-  <string name="tvout_enable_summary_nocable">Kabel za TV Izlaz nije spojen</string>
-  <string name="tvout_enable_summary">Kabel za TV Izlaz spojen, odaberi za uključivanje</string>
-  <string name="tvout_enable_summary_on">TV Izlaz uključen</string>
-  <string name="tvout_system_head">TV sistem</string>
-  <string name="tvout_system_summary">Postavi TV sistem za TV izlaz</string>
-  <string name="button_reset_title">Ponovno pokreni</string>
+  <string name="mdnie_summary_head">Podesite naknadnu obradu mDNIe zaslona.</string>
+  <string name="category_tvout_title">TV izlaz</string>
+  <string name="tvout_enable_head">TV izlaz</string>
+  <string name="tvout_enable_summary_nocable">Kabel za TV izlaz nije povezan.</string>
+  <string name="tvout_enable_summary">Kabel za TV izlaz je povezan, označite za omogućavanje.</string>
+  <string name="tvout_enable_summary_on">TV izlaz je omogućen.</string>
+  <string name="tvout_system_head">TV sustav</string>
+  <string name="tvout_system_summary">Postavite TV sustav za TV izlaz.</string>
+  <string name="button_reset_title">Ponovno pokretanje</string>
   <string name="generic_warning_title">Upozorenje</string>
   <string name="imei_not_sane_title">Upozorenje!</string>
-  <string name="imei_not_sane_message">Postoji problem s vašim uređajem. IMEI broj vašeg uređaja je pogrešan. Pogrešan IMEI broj može uzrokovati mrežne probleme uključujući nemogućnost uspostavljanja hitnih poziva.</string>
+  <string name="imei_not_sane_message">Otkriven je problem s vašim uređajem. IMEI broj vašeg uređaja nije važeći. Nevažeći IMEI broj može uzrokovati mrežne probleme uključujući nemogućnost uspostavljanja hitnih poziva.</string>
   <string name="imei_not_sane_ok">U redu</string>
 </resources>

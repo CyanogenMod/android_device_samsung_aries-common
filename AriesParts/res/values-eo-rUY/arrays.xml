@@ -16,11 +16,12 @@
      limitations under the License.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="app_name">تنظیمات پیشرفته</string>
-  <string name="category_screen_title">صفحه نمایش</string>
-  <string name="mdnie_title_head">حالت mDNIe</string>
-  <string name="button_reset_title">تنظیم مجدد</string>
-  <string name="generic_warning_title">هشدار</string>
-  <string name="imei_not_sane_title">هشدار!</string>
-  <string name="imei_not_sane_ok">بسیارخب</string>
+  <string-array name="mdnie_entries">
+    <item>Malŝaltita</item>
+    <item>UI</item>
+    <item>Video</item>
+    <item>Video warm</item>
+    <item>Video cold</item>
+    <item>Camera</item>
+  </string-array>
 </resources>

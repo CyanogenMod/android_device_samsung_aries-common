@@ -19,9 +19,9 @@
   <string-array name="mdnie_entries">
     <item>Onemogućeno</item>
     <item>Korisničko sučelje</item>
-    <item>Video</item>
+    <item>Videozapis</item>
     <item>Video toplo</item>
     <item>Video hladno</item>
-    <item>Kamera</item>
+    <item>Fotoaparat</item>
   </string-array>
 </resources>
